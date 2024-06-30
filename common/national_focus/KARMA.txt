@@ -1,0 +1,1283 @@
+focus_tree = {
+	id = KARMA
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = COM
+		}
+	}
+	default = no
+	focus = {
+		id = COM_Lider
+		text = 1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 29
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = COM_Sityacia
+		text = 2
+		icon = GFX_goal_continuous_suppression
+		cost = 1
+		prerequisite = {
+			focus = COM_Lider
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+		x = 29
+		y = 1
+
+	}
+	focus = {
+		id = COM_deystviya
+		text = 3
+		icon = GFX_focus_prc_infiltration
+		cost = 1
+		prerequisite = {
+			focus = COM_Sityacia
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+		x = 29
+		y = 2
+
+	}
+	focus = {
+		id = COM_reformia
+		icon = GFX_goal_rhineland
+		cost = 10
+		prerequisite = {
+			focus = COM_deystviya
+		}
+		completion_reward = {
+			set_technology = {
+				infantry_weapons = 1
+			}
+			army_experience = 45
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 5000
+			}
+		}
+		x = 19
+		y = 3
+
+	}
+	focus = {
+		id = COM_mex
+		icon = GFX_goal_continuous_armor_production
+		cost = 10
+		prerequisite = {
+			focus = COM_reformia
+		}
+		mutually_exclusive = {
+			focus = COM_army
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = motorized_equipment
+			}
+			
+		army_experience = 50
+	}
+		x = 16
+		y = 4
+
+	}
+	focus = {
+		id = COM_army
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = COM_reformia
+		}
+		mutually_exclusive = {
+			focus = COM_mex
+		}
+		completion_reward = {
+			add_ideas = {
+				COM_old_guard
+			}
+		}
+		x = 22
+		y = 4
+
+	}
+	focus = {
+		id = COM_flot
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+		prerequisite = {
+			focus = COM_deystviya
+		}
+		completion_reward = {
+			navy_experience = 50
+				add_tech_bonus = {
+					name = fleet_in_being_bonus
+					bonus = 0.5
+					uses = 1
+					category = fleet_in_being_tree
+			}
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = COM_stanki
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = COM_deystviya
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		x = 33
+		y = 3
+
+	}
+	focus = {
+		id = COM_stanki2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = COM_stanki
+		}
+		mutually_exclusive = {
+			focus = COM_mili
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 6
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+		x = 31
+		y = 4
+
+	}
+	focus = {
+		id = COM_brigade
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = COM_stanki2
+		}
+		completion_reward = {
+			add_resource = {
+				type = aluminium
+				amount = 10
+				state = 252
+			}
+			add_resource = {
+				type = steel
+				amount = 25
+				state = 252
+			}
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 252
+			}
+		}
+		x = 31
+		y = 5
+
+	}
+	focus = {
+		id = COM_mili
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = COM_stanki
+		}
+		mutually_exclusive = {
+			focus = COM_stanki2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 5
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+		x = 35
+		y = 4
+
+	}
+	focus = {
+		id = COM_ravno
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = COM_brigade
+			focus = COM_mili
+		}
+		completion_reward = {
+			remove_ideas = {
+				COM_promka
+			}
+		}
+		x = 33
+		y = 6
+
+	}
+	focus = {
+		id = COM_politica
+		text = 4
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = COM_deystviya
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		x = 43
+		y = 3
+
+	}
+	focus = {
+		id = COM_noch
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		cost = 10
+		prerequisite = {
+			focus = COM_politica
+		}
+		mutually_exclusive = {
+			focus = COM_Karma
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			every_state = {
+					add_manpower = -100000
+		}
+	}
+		x = 40
+		y = 4
+
+	}
+	focus = {
+		id = COM_nazi
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = COM_noch
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_political_power = -100
+		}
+		x = 38
+		y = 5
+
+	}
+	focus = {
+		id = COM_dav
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 10
+		prerequisite = {
+			focus = COM_noch
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			every_state = {
+					add_manpower = -150000
+		}
+		}
+		x = 42
+		y = 5
+
+	}
+	focus = {
+		id = COM_mer
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10
+		prerequisite = {
+			focus = COM_nazi
+		}
+		prerequisite = {
+			focus = COM_dav
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			every_state = {
+					add_manpower = -150000
+		}
+	}
+		x = 40
+		y = 6
+
+	}
+	focus = {
+		id = COM_cyeta
+		icon = GFX_focus_AST_squander_bug
+		cost = 10
+		prerequisite = {
+			focus = COM_mer
+		}
+		completion_reward = {
+			add_manpower = 200000
+			}
+		x = 42
+		y = 7
+
+	}
+	focus = {
+		id = COM_gaz
+		icon = GFX_focus_focus_fra_maquis
+		cost = 10
+		prerequisite = {
+			focus = COM_mer
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 3
+				uses = 1
+				category = infantry_weapons
+		}
+			}
+		x = 38
+		y = 7
+
+	}
+	focus = {
+		id = COM_ref
+		icon = GFX_focus_usa_honor_the_confederacy
+		cost = 10
+		prerequisite = {
+			focus = COM_cyeta
+		}
+		prerequisite = {
+			focus = COM_gaz
+		}
+		completion_reward = {
+			add_ideas = {
+				COM_warrior
+		}
+		}
+		x = 40
+		y = 8
+
+	}
+	focus = {
+		id = COM_cars
+		icon = GFX_goal_tfv_smiling_buddha
+		cost = 10
+		prerequisite = {
+			focus = COM_ref
+		}
+		completion_reward = {
+			add_stability = -0.5
+			create_wargoal = { type = annex_everything target = VPA }
+		}
+		x = 40
+		y = 9
+
+	}
+	focus = {
+		id = COM_yg
+		icon = GFX_focus_hol_war_on_pacifism
+		cost = 10
+		prerequisite = {
+			focus = COM_cars
+		}
+		completion_reward = {
+			add_stability = -0.25
+			create_wargoal = { type = annex_everything target = YNO }
+			create_wargoal = { type = annex_everything target = RMX }
+			create_wargoal = { type = annex_everything target = TBL }
+			create_wargoal = { type = annex_everything target = DKK }
+			create_wargoal = { type = annex_everything target = DCD }
+			create_wargoal = { type = annex_everything target = DVL }
+			create_wargoal = { type = annex_everything target = AKT }
+			create_wargoal = { type = annex_everything target = CIN }
+			create_wargoal = { type = annex_everything target = CWR }
+			create_wargoal = { type = annex_everything target = DCK }
+			create_wargoal = { type = annex_everything target = CLS }
+			create_wargoal = { type = annex_everything target = AMI }
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = YNO
+						is_core_of = RMX
+						is_core_of = TBL
+						is_core_of = DKK
+						is_core_of = DCD
+						is_core_of = DVL
+						is_core_of = AKT
+						is_core_of = CIN
+						is_core_of = CWR
+						is_core_of = DCK
+						is_core_of = CLS
+						is_core_of = AMI
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+		x = 40
+		y = 10
+
+	}
+	focus = {
+		id = COM_vostok
+		icon = GFX_focus_generic_strike_at_democracy3
+		cost = 10
+		prerequisite = {
+			focus = COM_cars
+		}
+		completion_reward = {
+			add_stability = -0.25
+			create_wargoal = { type = annex_everything target = BAR }
+			create_wargoal = { type = annex_everything target = VEX }
+			create_wargoal = { type = annex_everything target = YNO }
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = BAR
+						is_core_of = VEX
+						is_core_of = YNO
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+		x = 42
+		y = 10
+
+	}
+	focus = {
+		id = COM_Karma
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = COM_politica
+		}
+		mutually_exclusive = {
+			focus = COM_noch
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		x = 47
+		y = 4
+
+	}
+	focus = {
+		id = COM_Karma2
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 10
+		prerequisite = {
+			focus = COM_Karma
+		}
+		completion_reward = {
+			add_stability = 0.25
+			remove_ideas = {
+				COM_cyki
+			}
+		}
+		x = 45
+		y = 5
+
+	}
+	focus = {
+		id = COM_Karma3
+		icon = GFX_focus_por_concordat
+		cost = 10
+		prerequisite = {
+			focus = COM_Karma
+		}
+		completion_reward = {
+			add_stability = 0.25
+		}
+		x = 49
+		y = 5
+
+	}
+	focus = {
+		id = COM_Karma4
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 10
+		prerequisite = {
+			focus = COM_Karma2
+		}
+		prerequisite = {
+			focus = COM_Karma3
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			random_owned_controlled_state = {
+					add_manpower = -10000
+				}
+			}
+		x = 47
+		y = 6
+
+	}
+	focus = {
+		id = COM_push
+		icon = GFX_focus_generic_combined_arms
+		cost = 10
+		prerequisite = {
+			focus = COM_Karma4
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 3
+				uses = 1
+				category = armor
+		}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 1000
+		
+			}
+		}
+		x = 45
+		y = 7
+
+	}
+	focus = {
+		id = COM_konst
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = COM_Karma4
+		}
+		completion_reward = {
+			add_ideas = GEN_have_constitution
+		}
+		x = 49
+		y = 7
+
+	}
+	focus = {
+		id = COM_strana
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = COM_push
+		}
+		prerequisite = {
+			focus = COM_konst
+		}
+		completion_reward = {
+			add_stability = 0.1
+		}
+		x = 47
+		y = 8
+
+	}
+	focus = {
+		id = COM_pizdec
+		text = COM_pizdec
+		icon = GFX_focus_generic_manpower
+		cost = 10
+		prerequisite = {
+			focus = COM_strana
+		}
+		mutually_exclusive = {
+			focus = COM_mir
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = VEX }
+			create_wargoal = { type = annex_everything target = GUS }
+			create_wargoal = { type = annex_everything target = YNO }
+			create_wargoal = { type = annex_everything target = RMX }
+			create_wargoal = { type = annex_everything target = TBL }
+			create_wargoal = { type = annex_everything target = BAR }
+			create_wargoal = { type = annex_everything target = KIL }
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = VEX
+						is_core_of = GUS
+						is_core_of = YNO
+						is_core_of = RMX
+						is_core_of = TBL
+						is_core_of = BAR
+						is_core_of = KAR
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+		x = 49
+		y = 9
+
+	}
+	focus = {
+		id = COM_Karma5
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		prerequisite = {
+			focus = COM_pizdec
+		}
+		completion_reward = {
+			add_political_power = 100
+				}
+		x = 49
+		y = 10
+	}
+	focus = {
+		id = COM_alc
+		icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate
+		cost = 10
+		prerequisite = {
+			focus = COM_deystviya
+		}
+		completion_reward = {
+			add_political_power = 500
+			create_faction = Karma_Faction_Ally
+		}
+		x = 57
+		y = 3
+
+	}
+	focus = {
+		id = COM_kilka
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		prerequisite = {
+			focus = COM_alc
+		}
+		completion_reward = {
+			KIL = {
+				country_event = {
+				id = com.1
+				}
+			}
+		}
+		x = 53
+		y = 4
+
+	}
+	focus = {
+		id = COM_PSI
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 10
+		prerequisite = {
+			focus = COM_kilka
+		}
+		completion_reward = {
+			PSI = {
+				country_event = {
+				id = com.1
+				}
+			}
+		}
+		x = 53
+		y = 6
+
+	}
+	focus = {
+		id = COM_zapad
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = COM_cars
+		}
+		completion_reward = {
+			add_stability = -0.25
+			create_wargoal = { type = annex_everything target = GUS }
+			create_wargoal = { type = annex_everything target = KIL }
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = GUS
+						is_core_of = KAR
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+		x = 38
+		y = 10
+
+	}
+	focus = {
+		id = COM_ia
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10
+		prerequisite = {
+			focus = COM_vostok
+		}
+		prerequisite = {
+			focus = COM_yg
+		}
+		prerequisite = {
+			focus = COM_zapad
+		}
+		completion_reward = {
+			add_ideas = {
+				COM_sam
+			}
+			every_state = {
+					add_manpower = -100000
+		}
+		}
+		x = 40
+		y = 11
+
+	}
+	focus = {
+		id = COM_mir
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		prerequisite = {
+			focus = COM_strana
+		}
+		mutually_exclusive = {
+			focus = COM_pizdec
+		}
+		completion_reward = {
+			add_stability = 0.25
+			KIL = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+			GUS = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+			BAR = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+			VEX = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+			YNO = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+			RMX = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+			TBL = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+			DKK = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+			DVL = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+			DCD = {
+				country_event = {
+				id = COM_integrate_deal.1
+				}
+			}
+		}
+		x = 45
+		y = 9
+
+	}
+	focus = {
+		id = COM_annex
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5
+		prerequisite = {
+			focus = COM_strana
+			focus = COM_ref
+		}
+		available = {
+			has_manpower > 10000
+			VEX = {
+				has_stability < 0.7
+			}
+		}
+		completion_reward = {
+			add_manpower = -10000
+			ROOT = {
+				set_state_owner = 925
+			}
+			924 = {
+				set_demilitarized_zone = yes
+			}
+			833 = {
+				set_demilitarized_zone = yes
+			}
+			VEX = {
+				add_stability = -0.1
+			}
+		}
+		x = 43
+		y = 11
+	}
+	focus = {
+		id = COM_annex2
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5
+		prerequisite = {
+			focus = COM_annex
+		}
+		available = {
+			has_manpower > 50000
+			VEX = {
+				has_stability < 0.7
+			}
+			YNO = {
+				has_stability < 0.7
+			}
+		}
+		completion_reward = {
+			add_manpower = -50000
+			ROOT = {
+				set_state_owner = 926
+				set_state_owner = 255
+				set_state_owner = 924
+				set_state_owner = 833
+			}
+			VEX = {
+				add_stability = -0.2
+			}
+			YNO = {
+				add_stability = -0.3
+				create_wargoal = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+			VEX = {
+				add_stability = -0.3
+				create_wargoal = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+		}
+		x = 43
+		y = 12
+	}
+	focus = {
+		id = COM_annex3
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		prerequisite = {
+			focus = COM_annex2
+		}
+		available = {
+			has_stability > 0.5
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = VEX
+						is_core_of = YNO
+					}
+				}
+				add_core_of = ROOT
+			}
+				create_wargoal = {
+					target = VEX
+					type = annex_everything
+				}
+				create_wargoal = {
+					target = YNO
+					type = annex_everything
+				}
+		}
+		x = 43
+		y = 13
+	}
+	focus = {
+		id = COM_naha
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = COM_mir
+		}
+		completion_reward = {
+			add_stability = 0.25
+		}
+		x = 45
+		y = 10
+
+	}
+	focus = {
+		id = COM_car
+		icon = GFX_focus_generic_home_defense
+		cost = 10
+		prerequisite = {
+			focus = COM_naha
+		}
+		prerequisite = {
+			focus = COM_Karma5
+		}
+		completion_reward = {
+			add_stability = 0.5
+		}
+		x = 47
+		y = 11
+
+	}
+	focus = {
+		id = COM_mex2
+		icon = GFX_focus_generic_tank_production
+		cost = 10
+		prerequisite = {
+			focus = COM_mex
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 3
+				uses = 1
+				category = cat_light_armor
+		}
+		}
+		x = 16
+		y = 5
+
+	}
+	focus = {
+		id = COM_mex3
+		icon = GFX_focus_generic_license_production
+		cost = 10
+		prerequisite = {
+			focus = COM_mex2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = cat_heavy_armor
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 1000
+			}
+		}
+		x = 16
+		y = 6
+
+	}
+	focus = {
+		id = A_2
+		text = A_2
+		icon = GFX_focus_secret_rearmament
+		cost = 10
+		prerequisite = {
+			focus = COM_army3
+			focus = COM_mex3
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		x = 19
+		y = 7
+
+	}
+	focus = {
+		id = COM_army2
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+		prerequisite = {
+			focus = COM_army
+		}
+		completion_reward = {
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 3
+			category = artillery
+		}
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 1
+			category = cat_anti_tank
+		}
+	}
+		x = 22
+		y = 5
+
+	}
+	focus = {
+		id = COM_army3
+		icon = GFX_goal_continuous_air_production
+		cost = 10
+		prerequisite = {
+			focus = COM_army2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
+			}
+		}
+		x = 22
+		y = 6
+
+	}
+	focus = {
+		id = COM_flot2
+		icon = GFX_focus_generic_cruiser2
+		cost = 10
+		prerequisite = {
+			focus = COM_flot
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = COM_flot3
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		prerequisite = {
+			focus = COM_flot2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 10
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = dockyard
+					level = 10
+					instant_build = yes
+				}
+			}
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = COM_Gelden
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10
+		prerequisite = {
+			focus = COM_alc
+		}
+		completion_reward = {
+			GEL = {
+				country_event = {
+				id = com.1
+				}
+			}
+		}
+		x = 61
+		y = 4
+
+	}
+	focus = {
+		id = COM_kitay
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		cost = 10
+		prerequisite = {
+			focus = COM_Gelden
+		}
+		completion_reward = {
+			KTA = {
+				country_event = {
+				id = com.1
+				}
+			}
+		}
+		x = 61
+		y = 6
+
+	}
+	focus = {
+		id = COM_geniy
+		icon = GFX_focus_eng_motion_of_no_confidence
+		cost = 10
+		prerequisite = {
+			focus = COM_kitay
+		}
+		prerequisite = {
+			focus = COM_PSI
+		}
+		completion_reward = {
+			add_political_power = 200
+		}
+		x = 57
+		y = 7
+
+	}
+}

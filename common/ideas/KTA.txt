@@ -1,0 +1,48 @@
+ideas = {
+	# MILITARY
+	country = {
+		KTA_emmigration = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				monthly_population = -5
+			}
+		}
+		KTA_immigration = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				monthly_population = 15
+			}
+		}
+		KTA_without_war_production = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+		KTA_convoys_buy = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		KTA_immigrant_scientists = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		KTA_immigrant_scientists_protests = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.1
+				war_support_weekly = -0.1
+			}
+		}
+	}
+}

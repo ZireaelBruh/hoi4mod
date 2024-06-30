@@ -1,0 +1,459 @@
+# Имперская Конфедерация
+add_namespace = HEC
+add_namespace = HEC_commintern
+add_namespace = hec_tsar_created_faction
+add_namespace = hec_communism_created_faction
+add_namespace = news_hec
+add_namespace = DEF_hec
+
+news_event = {
+	id = DEF_hec.1
+	title = DEF_hec.1.t
+	desc = DEF_hec.1.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = DEF_hec.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = { target = VOR value > 50 }
+				factor = 100
+			}
+		}
+		add_manpower = 500000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 10000
+		}
+	}
+	option = {
+		name = DEF_hec.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = { target = VOR value < 50 }
+				factor = 100
+			}
+		}
+		564 = {
+			add_building_construction = {
+				type = bunker
+				level = 8
+				instant_build = yes
+				province = 7835
+			}
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = 12644
+			}
+		}
+		985 = {
+			add_building_construction = {
+				type = bunker
+				level = 3
+				instant_build = yes
+				province = 1762
+			}
+		}
+	}
+}
+
+news_event = {
+	id = news_hec.2
+	title = news_hec.2.t
+	desc = news_hec.2.d
+	major = yes
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = news_hec.2.a
+	}
+	option = {
+		name = news_hec.2.b
+	}
+}
+
+country_event = {
+	id = hec_communism_created_faction.1
+	title = hec_communism_created_faction.1.t
+	desc = hec_communism_created_faction.1.d
+	picture = GFX_report_event_polish_tanks_02
+	is_triggered_only = yes
+	option = {
+		name = hec_communism_created_faction.1.a
+		news_event = { id = news_hec.2 hours = 12 }
+	}
+}
+
+news_event = {
+	id = news_hec.1
+	title = news_hec.1.t
+	desc = news_hec.1.d
+	major = yes
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = news_hec.1.a
+	}
+	option = {
+		name = news_hec.1.b
+	}
+}
+
+country_event = {
+	id = hec_tsar_created_faction.1
+	title = hec_tsar_created_faction.1.t
+	desc = hec_tsar_created_faction.1.d
+	picture = GFX_report_event_polish_tanks_02
+	is_triggered_only = yes
+	option = {
+		name = hec_tsar_created_faction.1.a
+		news_event = { id = news_hec.1 hours = 12 }
+	}
+}
+
+country_event = {
+	id = hec.1
+	title = hec.1.t
+	desc = hec.1.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_war_with = FROM }
+	}
+	
+	option = {
+		name = hec.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 49
+				}
+				factor = 100
+			}
+		}
+		FROM = { country_event = { id = hec.2 days = 1 } }
+		effect_tooltip = {
+			FROM = {
+				puppet = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = hec.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value < 49
+				}
+				factor = 1000
+			}
+		}
+		FROM = { country_event = { id = hec.3 days = 1 }
+		}
+		effect_tooltip = {
+		}
+	}
+}
+
+# Имперская Конфедерация принял
+country_event = {
+	id = hec.2
+	title = hec.2.t
+	desc = hec.2.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hec.2.a
+		ROOT = {
+			puppet = FROM
+		}
+		add_war_support = 0.05 #dodged a bullet there
+	}
+}
+
+# Имперская Конфедерация отказ
+country_event = {
+	id = hec.3
+	title = hec.3.t
+	desc = hec.3.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hec.3.a
+	}
+}
+
+country_event = {
+	id = hec_commintern.1
+	title = hec_commintern.1.t
+	desc = hec_commintern.1.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_war_with = FROM }
+	}
+	
+	option = {
+		name = hec_commintern.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 49
+				}
+				factor = 100
+			}
+		}
+		FROM = { country_event = { id = hec_commintern.2 days = 1 } }
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = hec_commintern.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value < 49
+				}
+				factor = 100
+			}
+		}
+		FROM = { country_event = { id = hec_commintern.3 days = 1 }
+		}
+		effect_tooltip = {
+		}
+	}
+}
+
+# Имперская Конфедерация принял
+country_event = {
+	id = hec_commintern.2
+	title = hec_commintern.2.t
+	desc = hec_commintern.2.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hec_commintern.2.a
+		ROOT = {
+		add_to_faction = FROM
+		}
+		add_war_support = 0.05 #dodged a bullet there
+	}
+}
+
+# Имперская Конфедерация отказ
+country_event = {
+	id = hec_commintern.3
+	title = hec_commintern.3.t
+	desc = hec_commintern.3.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hec_commintern.3.a
+	}
+}
+
+country_event = {
+	id = hec_commintern.4
+	title = hec_commintern.4.t
+	desc = hec_commintern.4.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_war_with = FROM }
+	}
+	
+	option = {
+		name = hec_commintern.4.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				tag = HLD
+				is_in_faction_with = FROM
+				factor = 80
+			}
+			modifier = {
+				tag = DVL
+				is_in_faction_with = FROM
+				factor = 90
+			}
+			modifier = {
+				tag = KOT
+				is_in_faction_with = FROM
+				factor = 75
+			}
+			modifier = {
+				tag = JBL
+				is_in_faction_with = FROM
+				factor = 95
+			}
+			modifier = {
+				tag = GUP
+				is_in_faction_with = FROM
+				factor = 60
+			}
+			modifier = {
+				tag = KIT
+				is_in_faction_with = FROM
+				factor = 50
+			}
+			modifier = {
+				tag = SAL
+				is_in_faction_with = FROM
+				factor = 75
+			}
+			modifier = {
+				tag = EZO
+				is_in_faction_with = FROM
+				factor = 75
+			}
+			modifier = {
+				tag = GUS
+				is_in_faction_with = FROM
+				factor = 30
+			}
+		}
+		FROM = { country_event = { id = hec_commintern.5 days = 1 } }
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = hec_commintern.4.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				tag = HLD
+				is_in_faction_with = FROM
+				factor = 20
+			}
+			modifier = {
+				tag = DVL
+				is_in_faction_with = FROM
+				factor = 10
+			}
+			modifier = {
+				tag = KOT
+				is_in_faction_with = FROM
+				factor = 25
+			}
+			modifier = {
+				tag = JBL
+				is_in_faction_with = FROM
+				factor = 5
+			}
+			modifier = {
+				tag = GUP
+				is_in_faction_with = FROM
+				factor = 40
+			}
+			modifier = {
+				tag = KIT
+				is_in_faction_with = FROM
+				factor = 50
+			}
+			modifier = {
+				tag = SAL
+				is_in_faction_with = FROM
+				factor = 25
+			}
+			modifier = {
+				tag = EZO
+				is_in_faction_with = FROM
+				factor = 25
+			}
+			modifier = {
+				tag = GUS
+				is_in_faction_with = FROM
+				factor = 70
+			}
+		}
+		FROM = { country_event = { id = hec_commintern.6 days = 1 }
+		}
+		effect_tooltip = {
+		}
+	}
+}
+
+# Имперская Конфедерация принял
+country_event = {
+	id = hec_commintern.5
+	title = hec_commintern.5.t
+	desc = hec_commintern.5.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hec_commintern.5.a
+		ROOT = {
+		puppet = FROM
+		}
+		FROM = {
+		add_ideas = {
+			hec_red_army
+			hec_commintern
+			}
+		}
+		add_war_support = 0.05 #dodged a bullet there
+	}
+}
+
+# Имперская Конфедерация отказ
+country_event = {
+	id = hec_commintern.6
+	title = hec_commintern.6.t
+	desc = hec_commintern.6.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hec_commintern.6.a
+	}
+}

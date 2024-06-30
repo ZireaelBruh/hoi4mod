@@ -1,0 +1,140 @@
+focus_tree = {
+	id = VPA
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = VPA
+		}
+	}
+	default = no
+	focus = {
+		id = VPA_start
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 5
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = VPA_inside
+		cost = 1
+		x = 0.5
+		y = 1
+		prerequisite = {
+			focus = VPA_start
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = VPA_outside
+		cost = 1
+		x = 5
+		y = 1
+		prerequisite = {
+			focus = VPA_start
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = VPA_war_factories
+		cost = 1
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = VPA_inside
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = VPA_reunification
+		cost = 1
+		x = 4
+		y = 2
+		prerequisite = {
+			focus = VPA_outside
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = VPA_world_reunification
+		cost = 1
+		x = 4
+		y = 3
+		prerequisite = {
+			focus = VPA_reunification
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = VPA_industry
+		cost = 1
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = VPA_inside
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = VPA_naval_factory
+		cost = 1
+		x = 0.5
+		y = 3
+		prerequisite = {
+			focus = VPA_industry
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = VPA_naval_factory2
+		cost = 1
+		x = 0.5
+		y = 4
+		prerequisite = {
+			focus = VPA_naval_factory
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = VPA_factories1
+		cost = 1
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = VPA_industry
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = VPA_factories2
+		cost = 1
+		x = 2
+		y = 4
+		prerequisite = {
+			focus = VPA_factories1
+		}
+		completion_reward = {
+
+		}
+	}
+}

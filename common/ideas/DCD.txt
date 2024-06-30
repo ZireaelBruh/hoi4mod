@@ -1,0 +1,86 @@
+ideas = {
+	# MILITARY
+	country = {
+		DCD_volunteers_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteer_factor = 1
+				air_volunteer_cap = 100
+				send_volunteers_tension = -1
+			}
+		}
+		DCD_attack = {
+			picture = political_violence
+			removal_cost = -1
+			targeted_modifier = {
+				tag = DKK
+				attack_bonus_against = 0.1
+			}
+		}
+		DCD_tactics = {
+			picture = political_violence
+			removal_cost = -1
+			targeted_modifier = {
+				tag = GEL
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ANA
+				attack_bonus_against = 0.1
+			}
+		}
+		DCD_dead = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				surrender_limit = 1.0
+				ai_focus_aggressive_factor = 1.0
+			}
+		}
+		DCD_mass_conscription = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				conscription = 0.5
+			}
+		}
+		DCD_economy_buff = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+			}
+		}
+		DCD_tax_tourists = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		DCD_bananas = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		DCD_military_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		DCD_military_modern_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				max_fuel_factor = 0.1
+				justify_war_goal_time = -0.75
+			}
+		}
+	}
+}

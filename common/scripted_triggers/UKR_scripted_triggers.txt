@@ -1,0 +1,8 @@
+
+is_UKR_country = {
+	OR = {
+		original_tag = UKR
+		tag = ANA
+		tag = GEL
+	}
+}

@@ -1,0 +1,63 @@
+ideas = {
+	# MILITARY
+	country = {
+		PSI_dictator = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.25
+				stability_weekly_factor = -0.25
+			}
+		}
+		PSI_political_disputes = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				war_support_weekly = -0.5
+				join_faction_tension = 1.0
+				lend_lease_tension = 1.0
+				justify_war_goal_time = 1.0
+				surrender_limit = -0.5
+				conscription_factor = -0.2
+				command_power_gain = -0.5
+			}
+		}
+		PSI_monoparty = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.5
+				conscription_factor = -0.05
+			}
+		}
+		PSI_global_nazi = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				training_time_factor = -0.5
+				weekly_manpower = 1000
+			}
+		}
+		PSI_nazi_scientists = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.2
+			}
+		}
+		PSI_communist_scientists = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		PSI_communist_nukes = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				nuclear_production = 1
+			}
+		}
+	}
+}

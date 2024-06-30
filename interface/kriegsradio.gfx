@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "kriegsradio_album_art"
+        texturefile = "gfx/kriegsradio.dds"
+        noOfFrames = 2
+    }
+}

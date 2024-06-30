@@ -1,0 +1,8 @@
+﻿l_english:
+
+ RULE_SFS_GAMEPLAY:0 "Satisfying States"
+ RULE_ALLOW_SFS_EXTRA:0 "Extra Stuff"
+ RULE_OPTION_ALLOWED:0 "Enable"
+ RULE_ALLOW_SFS_EXTRA_ALLOWED_DESC:0 "Enable SFS Extra stuffs; decision, events, and scripts."
+ RULE_OPTION_BLOCKED:0 "Disable"
+ RULE_ALLOW_SFS_EXTRA_BLOCKED_DESC:0 "Most of SFS Extra stuffs will be disabled; decisions, events, and scripts."

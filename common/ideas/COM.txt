@@ -1,0 +1,159 @@
+ideas = {
+
+	country = {
+        
+                COM_cyki = {
+			allowed = {
+              
+				always = yes
+			}
+            
+            available = {
+
+            }
+
+            allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+            picture = usa_great_depression_3
+			
+            modifier = {
+				stability_factor = -0.25
+                war_support_factor = -0.25
+                political_power_factor = -0.025
+			}
+		}
+                 COM_ryka = {
+        allowed = {
+              
+				always = yes
+			}
+            
+            available = {
+
+            }
+
+            allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+            picture = generic_intel_bonus
+			
+            modifier = {
+				 war_support_factor = 0.10
+                 political_power_factor = 0.05 
+    }
+        }
+        COM_ostatok = {
+        allowed = {
+              
+				always = yes
+			}
+            
+            available = {
+
+            }
+
+            allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+            picture = generic_manpower_bonus
+			
+            modifier = {
+                 conscription_factor = 0.05
+                 }
+        }
+        
+        COM_promka = {
+            allowed = {
+              
+				always = yes
+			}
+            
+            available = {
+
+            }
+
+            allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+            picture = generic_industrial_concern_1
+			
+            modifier = {
+            production_factory_max_efficiency_factor = -0.10
+            production_factory_efficiency_gain_factor = -0.10
+            production_speed_buildings_factor = -0.30
+        }
+}
+
+COM_old_guard = {
+    removal_cost = -1
+    picture = usa_great_depression_3
+    modifier = {
+        army_attack_factor = 0.1
+        army_defence_factor = 0.1
+    }
+}
+
+COM_brigades = {
+    removal_cost = -1
+    picture = usa_great_depression_3
+    modifier = {
+        production_speed_buildings_factor = 0.4
+    }
+}
+
+COM_warrior = {
+
+    removal_cost = -1
+    
+    picture = usa_great_depression_3
+    
+    modifier = {
+         army_leader_start_level = 1
+         army_leader_start_attack_level = 1
+         army_leader_start_defense_level = 1
+         army_leader_start_logistics_level = 1
+         army_leader_start_planning_level = 1
+    }
+}
+
+COM_army = {
+
+    removal_cost = -1
+    
+    picture = usa_great_depression_3
+    
+    modifier = {
+        army_attack_factor = 0.1
+        army_defence_factor = 0.1
+        conscription_factor = 0.05
+    }
+}
+
+COM_sam = {
+
+    removal_cost = -1
+    
+    picture = usa_great_depression_3
+    
+    modifier = {
+        justify_war_goal_time = -0.5
+        lend_lease_tension = -1.0
+        surrender_limit = 0.05
+    }
+}
+
+    }
+}

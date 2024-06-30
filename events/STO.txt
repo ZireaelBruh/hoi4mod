@@ -1,0 +1,102 @@
+﻿# Оборонный пактSTO
+add_namespace = STO
+country_event = {
+	id = STO.1
+	title = STO.1.t
+	desc = STO.1.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_war_with = FROM }
+	}
+	
+	option = {
+		name = STO.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				tag = KIL
+				factor = 25
+			}
+			modifier = {
+				tag = PSI
+				factor = 75
+			}
+			modifier = {
+				tag = GEL
+				factor = 15
+			}
+			modifier = {
+				tag = KTA
+				factor = 50
+			}
+		}
+		FROM = { country_event = { id = STO.2 days = 1 } }
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = STO.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				tag = KIL
+				factor = 75
+			}
+			modifier = {
+				tag = PSI
+				factor = 25
+			}
+			modifier = {
+				tag = GEL
+				factor = 85
+			}
+			modifier = {
+				tag = KTA
+				factor = 50
+			}
+		}
+		FROM = { country_event = { id = STO.3 days = 1 }
+		}
+		effect_tooltip = {
+		}
+	}
+}
+
+# Оборонный пакт принял
+country_event = {
+	id = STO.2
+	title = STO.2.t
+	desc = STO.2.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = STO.2.a
+		ROOT = {
+		add_to_faction = FROM
+		}
+		add_war_support = 0.05 #dodged a bullet there
+	}
+}
+
+# Оборонный пакт отказ
+country_event = {
+	id = STO.3
+	title = STO.3.t
+	desc = STO.3.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = STO.3.a
+	}
+}

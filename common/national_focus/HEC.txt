@@ -1,0 +1,992 @@
+focus_tree = {
+	id = HEC
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HEC
+		}
+	}
+	default = no
+	focus = {
+		id = HEC_start
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 20
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = HEC_ideology
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 20
+		y = 1
+		prerequisite = {
+			focus = HEC_start
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -1
+			}
+			add_ideas = hec_neu_debuff
+		}
+	}
+	focus = {
+		id = HEC_start_fascism_propaganda
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 2
+		prerequisite = {
+			focus = HEC_ideology
+		}
+		mutually_exclusive = {
+			focus = HEC_start_communism_propaganda
+			focus = HEC_start_tsar_propaganda
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_stability = -0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = HEC_start_communism_propaganda
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 2
+		prerequisite = {
+			focus = HEC_ideology
+		}
+		mutually_exclusive = {
+			focus = HEC_start_tsar_propaganda
+			focus = HEC_start_fascism_propaganda
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_stability = -0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = HEC_start_tsar_propaganda
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 30
+		y = 2
+		prerequisite = {
+			focus = HEC_ideology
+		}
+		mutually_exclusive = {
+			focus = HEC_start_communism_propaganda
+			focus = HEC_start_fascism_propaganda
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_stability = -0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_ideas = {
+				hec_tsar
+			}
+		}
+	}
+	focus = {
+		id = HEC_tsar_reform
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 30
+		y = 3
+		prerequisite = {
+			focus = HEC_start_tsar_propaganda
+		}
+		completion_reward = {
+			add_stability = 0.25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_ideas = {
+				GEN_have_constitution
+			}
+			remove_ideas = hec_neu_debuff
+			remove_ideas = hec_dem_debuff
+			remove_ideas = hec_fas_debuff
+			remove_ideas = hec_com_debuff
+		}
+	}
+	focus = {
+		id = HEC_tsar_militarization
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 28
+		y = 3
+		prerequisite = {
+			focus = HEC_start_tsar_propaganda
+		}
+		completion_reward = {
+			add_war_support = 0.5
+			army_experience = 50
+			add_ideas = {
+				hec_tsar_military_idea
+			}
+		}
+	}
+	focus = {
+		id = HEC_tsar_politic
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 32
+		y = 3
+		prerequisite = {
+			focus = HEC_start_tsar_propaganda
+		}
+		completion_reward = {
+			add_stability = 0.05
+			diplomatic_relation = {
+				country = VOR
+				relation = guarantee
+				active = yes
+			}
+			diplomatic_relation = {
+				country = KTA
+				relation = guarantee
+				active = yes
+			}
+			diplomatic_relation = {
+				country = MON
+				relation = guarantee
+				active = yes
+			}
+			diplomatic_relation = {
+				country = FLK
+				relation = guarantee
+				active = yes
+			}
+			diplomatic_relation = {
+				country = SAL
+				relation = guarantee
+				active = yes
+			}
+		}
+	}
+	focus = {
+		id = HEC_tsar_politic_faction
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 31
+		y = 4
+		prerequisite = {
+			focus = HEC_tsar_politic
+			focus = HEC_tsar_reform
+		}
+		completion_reward = {
+			ROOT = {
+				country_event = {
+					id = hec_tsar_created_faction.1
+				}
+			}
+			create_faction = HEC_tsar_faction
+		}
+	}
+	focus = {
+		id = HEC_tsar_alliance
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 30
+		y = 5
+		prerequisite = {
+			focus = HEC_tsar_politic_faction
+		}
+		completion_reward = {
+		VOR = {
+				country_event = {
+				id = hec.1
+				}
+			}
+			FLK = {
+				country_event = {
+				id = hec.1
+				}
+			}
+			KTA = {
+				country_event = {
+				id = hec.1
+				}
+			}
+			MON = {
+				country_event = {
+				id = hec.1
+				}
+			}
+			SAL = {
+				country_event = {
+				id = hec.1
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEC_start_communism_uprise
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 18
+		y = 3
+		prerequisite = {
+			focus = HEC_start_communism_propaganda
+		}
+		mutually_exclusive = {
+			focus = HEC_start_communism_reforms
+		}
+		completion_reward = {
+			remove_ideas = hec_com_debuff
+			remove_ideas = hec_dem_debuff
+			remove_ideas = hec_fas_debuff
+			remove_ideas = hec_neu_debuff
+			start_civil_war = {
+				ruling_party = communism
+				ideology = ROOT
+				size = 0.8
+				keep_political_leader = yes
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_army_upgrade
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 4
+		prerequisite = {
+			focus = HEC_start_communism_uprise
+			focus = HEC_start_communism_reforms
+			focus = HEC_fascism_mass_propaganda
+			focus = HEC_tsar_militarization
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = inf_bonus
+				bonus = 2
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_moto_upgrade
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 5
+		prerequisite = {
+			focus = HEC_communism_army_upgrade
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = mot_bonus
+				bonus = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_art_upgrade
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 6
+		prerequisite = {
+			focus = HEC_communism_moto_upgrade
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = art_bonus
+				bonus = 2
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_tanks_upgrade
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 7
+		prerequisite = {
+			focus = HEC_communism_art_upgrade
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = tanks_bonus
+				bonus = 2
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = HEC_start_communism_reforms
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 22
+		y = 3
+		prerequisite = {
+			focus = HEC_start_communism_propaganda
+		}
+		mutually_exclusive = {
+			focus = HEC_start_communism_uprise
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			remove_ideas = hec_dem_debuff
+		}
+	}
+	focus = {
+		id = HEC_communism_factories
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 24
+		y = 4
+		prerequisite = {
+			focus = HEC_start_communism_reforms
+			focus = HEC_start_communism_uprise
+			focus = HEC_fascism_mass_propaganda
+			focus = HEC_tsar_militarization
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_factories2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 24
+		y = 5
+		prerequisite = {
+			focus = HEC_communism_army_factories
+			focus = HEC_communism_factories
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_factories3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 24
+		y = 6
+		prerequisite = {
+			focus = HEC_communism_army_factories2
+			focus = HEC_communism_factories2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_army_factories
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 26
+		y = 4
+		prerequisite = {
+			focus = HEC_start_communism_reforms
+			focus = HEC_start_communism_uprise
+			focus = HEC_fascism_mass_propaganda
+			focus = HEC_tsar_militarization
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_army_factories2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 26
+		y = 5
+		prerequisite = {
+			focus = HEC_communism_army_factories
+			focus = HEC_communism_factories
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_army_factories3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 26
+		y = 6
+		prerequisite = {
+			focus = HEC_communism_army_factories2
+			focus = HEC_communism_factories2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_navy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 25
+		y = 7
+		prerequisite = {
+			focus = HEC_communism_army_factories3
+			focus = HEC_communism_factories3
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 5
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEC_next_communism_reforms
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 22
+		y = 4
+		prerequisite = {
+			focus = HEC_start_communism_reforms
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+				last_election = "1935.12.17"
+				election_frequency = 48
+			}
+			remove_ideas = hec_com_debuff
+		}
+	}
+	focus = {
+		id = HEC_start_communism_reforms_faction
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 5
+		prerequisite = {
+			focus = HEC_next_communism_reforms
+			focus = HEC_start_communism_uprise
+		}
+		completion_reward = {
+			create_faction = HEC_communist_faction
+			add_ideas = {
+				hec_commintern
+			}
+			remove_ideas = hec_neu_debuff
+			remove_ideas = hec_fas_debuff
+		}
+	}
+	focus = {
+		id = HEC_start_communism_reforms_faction_join
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 6
+		prerequisite = {
+			focus = HEC_start_communism_reforms_faction
+		}
+		completion_reward = {
+			ROOT = {
+				country_event = {
+					id = hec_communism_created_faction.1
+				}
+			}
+			every_country = {
+				limit = {
+					has_government = communism
+				}
+				country_event = {
+						id = hec_commintern.1
+					}
+			}
+		}
+	}
+	focus = {
+		id = HEC_start_communism_reforms_faction_economy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 7
+		prerequisite = {
+			focus = HEC_start_communism_reforms_faction
+		}
+		completion_reward = {
+			GUP = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+			JBL = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+			HLD = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+			KOT = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+			DVL = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+			KOT = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+			KIT = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+			SAL = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+			EZO = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+			GUS = {
+				country_event = {
+					id = hec_commintern.4
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEC_communism_red_army
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 6
+		prerequisite = {
+			focus = HEC_start_communism_reforms_faction
+		}
+		completion_reward = {
+			add_ideas = {
+				hec_red_army
+			}
+		}
+	}
+	focus = {
+		id = HEC_fascism_mass_propaganda
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 3
+		prerequisite = {
+			focus = HEC_start_fascism_propaganda
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = -200
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+		}
+	}
+	focus = {
+		id = HEC_fascism_government
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 4
+		prerequisite = {
+			focus = HEC_fascism_mass_propaganda
+		}
+		completion_reward = {
+			add_stability = -0.25
+			add_political_power = -300
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_ideas = {
+				hec_new_world
+			}
+			remove_ideas = hec_fas_debuff
+		}
+	}
+	focus = {
+		id = HEC_fascism_kill_communist
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 5
+		prerequisite = {
+			focus = HEC_fascism_government
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = -1.0
+			}
+			remove_ideas = hec_com_debuff
+		}
+	}
+	focus = {
+		id = HEC_fascism_kill_neutrality
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 5
+		prerequisite = {
+			focus = HEC_fascism_government
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			add_popularity = {
+				ideology = neutrality
+				popularity = -1.0
+			}
+			remove_ideas = hec_neu_debuff
+		}
+	}
+	focus = {
+		id = HEC_fascism_kill_democratic
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 14
+		y = 5
+		prerequisite = {
+			focus = HEC_fascism_government
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = -1.0
+			}
+			remove_ideas = hec_dem_debuff
+		}
+	}
+	focus = {
+		id = HEC_fascism_kill_propaganda
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 6
+		prerequisite = {
+			focus = HEC_fascism_kill_communist
+		}
+		prerequisite = {
+			focus = HEC_fascism_kill_democratic
+		}
+		prerequisite = {
+			focus = HEC_fascism_kill_neutrality
+		}
+		completion_reward = {
+			add_stability = 0.5
+			add_political_power = 100
+			add_ideas = {
+				hec_reich_population_killer
+			}
+		}
+	}
+	focus = {
+		id = HEC_fascism_war_east
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 14
+		y = 9
+		prerequisite = {
+			focus = HEC_fascism_kill_propaganda
+		}
+		completion_reward = {
+				create_wargoal = {
+					type = annex_everything
+					target = KTA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WER
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = XAM
+	}
+	create_wargoal = {
+		type = annex_everything
+		target = PSI
+}
+every_state = {
+	limit = {
+		OR = {
+			is_core_of = KTA
+			is_core_of = WER
+			is_core_of = XAM
+			is_core_of = PSI
+		}
+	}
+	add_core_of = ROOT
+}
+		}
+	}
+	focus = {
+		id = HEC_fascism_war_west
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 7
+		prerequisite = {
+			focus = HEC_fascism_kill_propaganda
+		}
+		completion_reward = {
+				create_wargoal = {
+					type = annex_everything
+					target = VOR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FLK
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = VOR
+						is_core_of = FLK
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = HEC_fascism_war_west2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 8
+		prerequisite = {
+			focus = HEC_fascism_war_west
+		}
+		completion_reward = {
+				create_wargoal = {
+					type = annex_everything
+					target = ACK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SAL
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = ACK
+						is_core_of = SAL
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = HEC_fascism_war_west3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 9
+		prerequisite = {
+			focus = HEC_fascism_war_west2
+		}
+		completion_reward = {
+				create_wargoal = {
+					type = annex_everything
+					target = NZR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KOT
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = NZR
+						is_core_of = KOT
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = HEC_fascism_war_south
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 7
+		prerequisite = {
+			focus = HEC_fascism_kill_propaganda
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MON
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = MON
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = HEC_fascism_war_south2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 9
+		prerequisite = {
+			focus = HEC_fascism_war_south
+		}
+		completion_reward = {
+				create_wargoal = {
+					type = annex_everything
+					target = KOR
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = KOR
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = HEC_fascism_war_great_reich
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 10
+		prerequisite = {
+			focus = HEC_fascism_war_east
+		}
+		prerequisite = {
+			focus = HEC_fascism_war_south2
+		}
+		prerequisite = {
+			focus = HEC_fascism_war_west3
+		}
+		completion_reward = {
+			set_cosmetic_tag = HEC_Great_Reich
+			add_threat = 25
+			add_ideas = {
+				hec_great_reich_idea
+			}
+		}
+	}
+}

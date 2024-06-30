@@ -1,0 +1,67 @@
+
+music_station = "kriegsradio"
+
+music = {
+	song = "GHOSTFACE PLAYA - I DONT GIVE A FUCK (FEAT. PHARMACIST)"
+
+}
+
+music = {
+	song = "GRAVECHILL - TWILIGHT"
+
+}
+
+music = {
+	song = "ikitata - Дресскод x Shadowraze - Astral Step"
+
+}
+
+music = {
+	song = "KORDHELL - LIVE ANOTHER DAY"
+
+}
+
+music = {
+	song = "KORDHELL - Murder In My Mind"
+
+}
+
+music = {
+	song = "MUPP - Tokyo Revengers"
+
+}
+
+music = {
+	song = "never-met"
+
+}
+
+music = {
+	song = "PRXSXNT FXTURE - SMOKED OUT"
+
+}
+
+music = {
+	song = "SHADXWBXRN - ADRENALIN"
+
+}
+
+music = {
+	song = "SHADXWBXRN - KNIGHT"
+
+}
+
+music = {
+	song = "SHADXWBXRN, ARCHEZ, KXNVRA - PRINCE OF DARKNESS"
+
+}
+
+music = {
+	song = "Wenn Die Soldaten"
+
+}
+
+music = {
+	song = "подлая еврейская музыка"
+
+}

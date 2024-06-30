@@ -1,0 +1,23 @@
+state={
+	id=730
+	name="STATE_730"
+	manpower=3426
+	state_category = tiny_island
+
+	history={
+		
+		buildings = {
+			infrastructure = 2 #was 3
+			373 = {
+				naval_base = 1
+			}
+		}
+		add_claim_by = QBC
+		add_claim_by = NFL
+		
+	}
+	
+	provinces={ 373 }
+
+	local_supplies=0.0 
+}

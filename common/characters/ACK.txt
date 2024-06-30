@@ -1,0 +1,54 @@
+characters = {
+	ACK_n_leader = {
+		name = "Аскри"
+		portraits = {
+			civilian = {
+				large = "GFX_ACK_neutrality"
+			}
+		}
+		country_leader = {
+			ideology = centrism
+			traits = {}
+			expire = "1965.1.1"
+		}
+	}
+	ACK_d_leader = {
+		name = "Аскри"
+		portraits = {
+			civilian = {
+				large = "GFX_ACK_democratic"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = {}
+			expire = "1965.1.1"
+		}
+	}
+	ACK_c_leader = {
+		name = "Аскри"
+		portraits = {
+			civilian = {
+				large = "GFX_ACK_communism"
+			}
+		}
+		country_leader = {
+			ideology = anarchist_communism
+			traits = {}
+			expire = "1965.1.1"
+		}
+	}
+	ACK_f_leader = {
+		name = "Аскри"
+		portraits = {
+			civilian = {
+				large = "GFX_ACK_fascism"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			traits = {}
+			expire = "1965.1.1"
+		}
+	}
+}

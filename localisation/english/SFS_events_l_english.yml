@@ -1,0 +1,89 @@
+﻿l_english:
+
+ #New Slovenia event
+ germany.940.t:0 "The London Surrender"
+ germany.940.d:0 "London has surrendered to our claim for Slovenia. Now we can consider two options: divide Slovenia with our friends or take all of it."
+ germany.940.a:0 "Divide Slovenia with Italy and Hungary."
+ germany.940.b:0 "Take it all!"
+ 
+ germany.941.t:0 "Germany Cedes Part of Slovenia"
+ germany.941.d:0 "Germany gave part of Slovenia to us."
+ germany.941.a:0 "Great!"
+
+ germany.942.t:0 "Germany Cedes Part of Slovenia"
+ germany.942.d:0 "Germany gave part of Slovenia to us."
+ germany.942.a:0 "Great!"
+ 
+ #Burgenland Question
+ sfs.1.t:0 "Hungary Requests Burgenland"
+ sfs.1.d:0 "Burgenland was part of Hungary until 1921, after which a general election was held and the territory was ceded to Austria. Despite the fact that the majority of the population is German-speaking, Hungary wishes to have the territory back."
+ sfs.1.a:0 "Hungarians are just a minority there."
+ sfs.1.b:0 "Let them have it."
+ 
+ sfs.100.t:0 "Germany Accepted Our Request"
+ sfs.100.d:0 "The German government has accepted our request. Hungarians, come back home!"
+ sfs.100.a:0 "The Germans are our best friends ever!"
+ 
+ sfs.101.t:0 "Germany Refused Our Request"
+ sfs.101.d:0 "The German government has refused our request. They probably view it as reckless request."
+ sfs.101.a:0 "I knew they'd refuses."
+ 
+ #Separate Burma
+ burma_separate_tt:0 "§YBurma§! will be separate from §Y[RAJ.GetName]§!"
+ 
+ #Pope Died
+ sfs.3.t:0 "The Death of Pope Pius XI"
+ sfs.3.d:0 "Pope Pius XI had been ill for some time when, on 25 November 1938, he suffered two heart attacks within several hours. He had serious breathing problems and could not leave his apartment. Medical specialists reported that heart insufficiency combined with bronchial attacks had hopelessly complicated his already poor prospects. \nPope Pius XI died at 5:31 A.M. (Rome Time) of a third heart attack on 10 February 1939, at the age of 81. His last words to those near him at the time of his death were spoken with clarity and firmness: 'My soul parts from you all in peace.'"
+ sfs.3.a:0 "Oh, dear..."
+ sfs.3.b:0 "Hopefully Pius XII will reign as long."
+ 
+ #Occupy Schutzzone
+ sfs.30.t:0 "German-Slovak Treaty"
+ sfs.30.d:0 "According to the protective relationship between Germany and the Slovak State, we can now occupy part of Western Slovakia. Although the territory looks small, several weapon factories and important ex-Czechoslovak depots of arms are located there. What should we do?"
+ sfs.30.a:0 "Military Occupation."
+ sfs.30.b:0 "Remain as Slovakia."
+ 
+ #Capital of Austria-Hungary
+ sfs.4.t:0 "Question of Capital"
+ sfs.4.d:0 "Follow the restoration of Austria-Hungary, some government figures have discussed a change of capital. Although the Hungarians are the ones to reunite both two countries, Vienna was the capital of our old empire. What should we do?"
+ sfs.4.a:0 "Vienna is the legitimate capital."
+ sfs.4.b:0 "The Hungarians will lead this empire from Hungary itself."
+
+ #Hitler suicide
+ sfs.5.d:0 "With the capture of Berlin, our troops discovered the corpse of Hitler in a bunker in the city. Choosing death over seeing Allies take over the country, the leader evidently took his own life rather than risk capture.\n\nIn accordance with the will of Hitler, Karl Dönitz has now stepped up to lead the Nazis."
+ sfs.5.a:0 "Nazis are Fallen."
+
+ #Jewish states - Palestine
+ sfs.6.t:0 "Question of Palestine"
+ sfs.6.d:0 "This place was historical region of Arabians. so if we trying to establish Jewish state on this region, there will be conflict between Jewish and Arabians."
+ sfs.6.a:0 "Whole of Palestine."
+ sfs.6.b:0 "Arabs will be get Gaza strip and West bank." #History
+ sfs.6.c:0 "West bank" #State of Judea
+ 
+ #New name of Leningrad
+ sfs_city.1.t:0 "A New Name for [195.GetName]"
+ sfs_city.1.d:0 "We can change the name of this symbolic city. What name shall we give it?"
+ sfs_city.1.SAINT:0 "St. Petersburg"
+ sfs_city.1.PETRO:0 "Petrograd"
+ sfs_city.1.LUDENDORFF:0 "Ludendorff"
+ sfs_city.1.ZIZIGRAD:0 "Zizigrad"
+ 
+ #New name of Stalingrad
+ sfs_city.2.t:0 "A New Name for [217.GetName]"
+ sfs_city.2.d:0 "We can change the name of this symbolic city. What name shall we give it?"
+ sfs_city.2.VOLGOGRAD:0 "Volgograd"
+ sfs_city.2.TSARITSYN:0 "Tsaritsyn"
+ sfs_city.2.HINDENBURG:0 "Hindenburg"
+ sfs_city.2.KAISER:0 "Kaiserstadt"
+ sfs_city.2.MAGDAGRAD:0 "Magdagrad"
+ 
+ #New name of Stalingrad
+ sfs_city.4.t:0 "A New Name for [217.GetName]"
+ sfs_city.4.d:0 "We can change the name of this historical city. What name shall we give it?"
+ sfs_city.4.YUZOVKA:0 "Yuzovka"
+ sfs_city.4.YUZIVKA:0 "Yuzivka"
+ sfs_city.4.DONETSK:0 "Donetsk"
+ sfs_city.4.BISMARCK:0 "Bismarck"
+
+ ##flag##
+ BRM_separated:0 "Burma Separated"

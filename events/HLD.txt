@@ -1,0 +1,284 @@
+add_namespace = HLD
+add_namespace = hld_democratic_created_faction
+add_namespace = news_hld
+add_namespace = hld_c
+add_namespace = hld_a
+
+news_event = {
+	id = news_hld.1
+	title = news_hld.1.t
+	desc = news_hld.1.d
+	major = yes
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = news_hld.1.a
+	}
+	option = {
+		name = news_hld.1.b
+	}
+}
+
+country_event = {
+	id = hld_democratic_created_faction.1
+	title = hld_democratic_created_faction.1.t
+	desc = hld_democratic_created_faction.1.d
+	picture = GFX_report_event_polish_tanks_02
+	is_triggered_only = yes
+	option = {
+		name = hld_democratic_created_faction.1.a
+		news_event = { id = news_hld.1 hours = 12 }
+	}
+}
+
+country_event = {
+	id = hld.1
+	title = hld.1.t
+	desc = hld.1.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_war_with = FROM }
+	}
+	
+	option = {
+		name = hld.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 49
+				}
+				factor = 100
+			}
+		}
+		FROM = { country_event = { id = hld.2 days = 1 } }
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = hld.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value < 49
+				}
+				factor = 100
+			}
+		}
+		FROM = { country_event = { id = hld.3 days = 1 }
+		}
+		effect_tooltip = {
+		}
+	}
+}
+# Имперская Конфедерация принял
+country_event = {
+	id = hld.2
+	title = hld.2.t
+	desc = hld.2.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hld.2.a
+		ROOT = {
+		add_to_faction = FROM
+		}
+		add_war_support = 0.05 #dodged a bullet there
+	}
+}
+
+# Имперская Конфедерация отказ
+country_event = {
+	id = hld.3
+	title = hld.3.t
+	desc = hld.3.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hld.3.a
+	}
+}
+
+country_event = {
+	id = hld_c.1
+	title = hld_c.1.t
+	desc = hld_c.1.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_war_with = FROM }
+		has_government = communism
+	}
+	
+	option = {
+		name = hld_c.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 49
+				}
+				factor = 100
+			}
+		}
+		FROM = { country_event = { id = hld_c.2 days = 1 } }
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = hld_c.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value < 49
+				}
+				factor = 100
+			}
+		}
+		FROM = { country_event = { id = hld_c.3 days = 1 }
+		}
+		effect_tooltip = {
+		}
+	}
+}
+# Имперская Конфедерация принял
+country_event = {
+	id = hld_c.2
+	title = hld_c.2.t
+	desc = hld_c.2.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hld_c.2.a
+		ROOT = {
+		add_to_faction = FROM
+		}
+		add_war_support = 0.05 #dodged a bullet there
+	}
+}
+
+# Имперская Конфедерация отказ
+country_event = {
+	id = hld_c.3
+	title = hld_c.3.t
+	desc = hld_c.3.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hld_c.3.a
+	}
+}
+
+country_event = {
+id = hld_a.1
+title = hld_a.1.t
+desc = hld_a.1.d
+picture = GFX_report_event_german_troops
+
+is_triggered_only = yes
+
+trigger = {
+	NOT = { has_war_with = FROM }
+	has_government = neutrality
+}
+
+option = {
+	name = hld_a.1.a
+	ai_chance = {
+		factor = 1
+		modifier = {
+			has_opinion = {
+				target = FROM
+				value > 49
+			}
+			factor = 100
+		}
+	}
+	FROM = { country_event = { id = hld_a.2 days = 1 } }
+	effect_tooltip = {
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+option = {
+	name = hld_a.1.b
+	ai_chance = {
+		factor = 1
+		modifier = {
+			has_opinion = {
+				target = FROM
+				value < 49
+			}
+			factor = 100
+		}
+	}
+	FROM = { country_event = { id = hld_a.3 days = 1 }
+	}
+	effect_tooltip = {
+	}
+}
+}
+# Имперская Конфедерация принял
+country_event = {
+id = hld_a.2
+title = hld_a.2.t
+desc = hld_a.2.d
+picture = GFX_report_event_german_polish_border
+
+is_triggered_only = yes
+
+option = {
+	name = hld_a.2.a
+	ROOT = {
+	add_to_faction = FROM
+	}
+	add_war_support = 0.05 #dodged a bullet there
+}
+}
+
+# Имперская Конфедерация отказ
+country_event = {
+id = hld_a.3
+title = hld_a.3.t
+desc = hld_a.3.d
+picture = GFX_report_event_polish_tanks_02
+
+is_triggered_only = yes
+
+option = {
+	name = hld_a.3.a
+}
+}

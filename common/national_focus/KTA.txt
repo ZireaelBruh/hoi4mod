@@ -1,0 +1,587 @@
+focus_tree = {
+	id = KTA
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KTA
+		}
+	}
+	default = no
+	focus = {
+		id = KTA_start_ecomony
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 0
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_factory1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 1
+		prerequisite = {
+			focus = KTA_start_ecomony
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_factory2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 2
+		prerequisite = {
+			focus = KTA_factory1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_factory3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 3
+		prerequisite = {
+			focus = KTA_factory2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_arms_factory1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 1
+		prerequisite = {
+			focus = KTA_start_ecomony
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_arms_factory2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 2
+		prerequisite = {
+			focus = KTA_arms_factory1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_arms_factory3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 3
+		prerequisite = {
+			focus = KTA_arms_factory2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_economy_full
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 4
+		prerequisite = {
+			focus = KTA_factory3
+		}
+		prerequisite = {
+			focus = KTA_arms_factory3
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 25
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = KTA_crisis_better_infrastructure
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 24
+		y = 1
+		prerequisite = {
+			focus = KTA_crisis
+		}
+		prerequisite = {
+			focus = KTA_start_ecomony
+		}
+		completion_reward = {
+			add_political_power = -100
+			563 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis_better_infrastructure2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 2
+		prerequisite = {
+			focus = KTA_crisis_better_infrastructure
+		}
+		completion_reward = {
+			add_political_power = -100
+			565 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis_better_airport
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 25
+		y = 2
+		prerequisite = {
+			focus = KTA_crisis_better_infrastructure
+		}
+		completion_reward = {
+			add_political_power = -100
+			565 = {
+				add_building_construction = {
+					type = air_base
+					level = 8
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis_better_airport2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 3
+		prerequisite = {
+			focus = KTA_crisis_better_infrastructure2
+		}
+		completion_reward = {
+			add_political_power = -100
+			563 = {
+				add_building_construction = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 29
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = KTA_crisis2_start_factory
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 28
+		y = 1
+		prerequisite = {
+			focus = KTA_crisis2
+		}
+		prerequisite = {
+			focus = KTA_start_ecomony
+		}
+		completion_reward = {
+			add_political_power = -100
+			563 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis2_new_factory
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 28
+		y = 2
+		prerequisite = {
+			focus = KTA_crisis2_start_factory
+		}
+		completion_reward = {
+			add_political_power = -100
+			565 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis2_production
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 28
+		y = 3
+		prerequisite = {
+			focus = KTA_crisis2_new_factory
+		}
+		completion_reward = {
+			add_political_power = -100
+			remove_ideas = KTA_without_war_production
+		}
+	}
+	focus = {
+		id = KTA_crisis3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 33
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = KTA_crisis3_start_reforms
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 31
+		y = 1
+		prerequisite = {
+			focus = KTA_crisis3
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis3_constitution
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 31
+		y = 2
+		prerequisite = {
+			focus = KTA_crisis3_start_reforms
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_ideas = GEN_have_constitution
+		}
+	}
+	focus = {
+		id = KTA_crisis3_allow_demonstrations
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 31
+		y = 3
+		prerequisite = {
+			focus = KTA_crisis3_constitution
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis3_buy_weapon
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 33
+		y = 2
+		prerequisite = {
+			focus = KTA_crisis3_start_reforms
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_timed_idea = { idea = KTA_convoys_buy days = 180 }
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 25000
+			}
+		}
+	}
+	focus = {
+		id = KTA_crisis3_take_scientists
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 33
+		y = 3
+		prerequisite = {
+			focus = KTA_crisis3_constitution
+			focus = KTA_crisis3_buy_weapon
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.25
+			}
+			add_ideas = KTA_immigrant_scientists
+			add_ideas = KTA_immigrant_scientists_protests
+		}
+	}
+	focus = {
+		id = KTA_crisis3_take_scientists_remove_idea
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 32
+		y = 4
+		mutually_exclusive = {
+			focus = KTA_crisis3_take_scientists_remove_idea2
+		}
+		prerequisite = {
+			focus = KTA_crisis3_take_scientists
+		}
+		completion_reward = {
+			add_political_power = -1000
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.75
+			}
+			remove_ideas = KTA_immigrant_scientists_protests
+		}
+	}
+	focus = {
+		id = KTA_crisis3_take_scientists_remove_idea2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 25
+		x = 34
+		y = 4
+		prerequisite = {
+			focus = KTA_crisis3_take_scientists
+		}
+		mutually_exclusive = {
+			focus = KTA_crisis3_take_scientists_remove_idea
+		}
+		completion_reward = {
+			add_political_power = 100
+			remove_ideas = KTA_immigrant_scientists_protests
+		}
+	}
+	
+	focus = {
+		id = KTA_crisis_better_burocracy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 24
+		y = 4
+		prerequisite = {
+			focus = KTA_crisis_better_airport
+		}
+		prerequisite = {
+			focus = KTA_crisis_better_airport2
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = KTA_crisises_take_scientists_remove_emmigration
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 25
+		x = 28
+		y = 5
+		prerequisite = {
+			focus = KTA_crisis2_production
+		}
+		prerequisite = {
+			focus = KTA_crisis3_allow_demonstrations
+		}
+		prerequisite = {
+			focus = KTA_crisis_better_burocracy
+		}
+		completion_reward = {
+			add_political_power = 100
+			remove_ideas = KTA_emmigration
+			add_ideas = KTA_immigration
+		}
+	}
+	focus = {
+		id = KTA_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 28
+		y = 6
+		prerequisite = {
+			focus = KTA_crisises_take_scientists_remove_emmigration
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = KTA_war1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 28
+		y = 7
+		prerequisite = {
+			focus = KTA_war
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_state_core = 564
+			add_state_core = 574
+			add_state_core = 561
+			add_state_core = 644
+			add_state_core = 575
+			add_state_core = 516
+			add_state_core = 567
+			add_state_core = 576
+			add_state_core = 568
+			add_state_core = 566
+			add_state_core = 329
+			add_state_core = 654
+			add_state_core = 40
+			add_state_core = 562
+			add_state_core = 822
+			add_state_core = 637
+			add_state_core = 650
+			add_state_core = 537
+			add_state_core = 655
+			add_state_core = 555
+			add_state_core = 560
+			add_state_core = 657
+			add_state_core = 409
+			add_state_core = 408
+		}
+	}
+	focus = {
+		id = KTA_war2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 28
+		y = 8
+		prerequisite = {
+			focus = KTA_war1
+		}
+		completion_reward = {
+			add_political_power = 100
+			create_wargoal = { type = annex_everything target = HEC }
+			create_wargoal = { type = annex_everything target = WER }
+			create_wargoal = { type = annex_everything target = XAM }
+			create_wargoal = { type = annex_everything target = PSI }
+			create_wargoal = { type = annex_everything target = VOR }
+			create_wargoal = { type = annex_everything target = FLK }
+			create_wargoal = { type = annex_everything target = ACK }
+			create_wargoal = { type = annex_everything target = PSY }
+			create_wargoal = { type = annex_everything target = SAL }
+			create_wargoal = { type = annex_everything target = NZR }
+			create_wargoal = { type = annex_everything target = KOT }
+		}
+	}
+}

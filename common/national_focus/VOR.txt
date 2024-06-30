@@ -1,0 +1,634 @@
+focus_tree = {
+	id = VOR
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = VOR
+		}
+	}
+	default = no
+	focus = {
+		id = VOR_start_economy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 4
+		y = 0
+		completion_reward = {
+			add_ideas = VOR_const
+		}
+	}
+	focus = {
+		id = VOR_economy_factory
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = VOR_start_economy
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_factory1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 3
+		y = 2
+		prerequisite = {
+			focus = VOR_economy_factory
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_factory2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 3
+		y = 3
+		prerequisite = {
+			focus = VOR_economy_factory1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_arms_factory
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 5
+		y = 1
+		prerequisite = {
+			focus = VOR_start_economy
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_arms_factory1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 5
+		y = 2
+		prerequisite = {
+			focus = VOR_economy_arms_factory
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_arms_factory2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 5
+		y = 3
+		prerequisite = {
+			focus = VOR_economy_arms_factory1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_full
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 4
+		y = 4
+		prerequisite = {
+			focus = VOR_economy_arms_factory2
+		}
+		prerequisite = {
+			focus = VOR_economy_factory2
+		}
+		completion_reward = {
+			566 = { set_state_category = megalopolis add_manpower = 1000000 }
+			984 = { set_state_category = metropolis add_manpower = 500000 }
+			983 = { set_state_category = large_city add_manpower = 100000 }
+		}
+	}
+	focus = {
+		id = VOR_economy_rail
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = VOR_start_economy
+		}
+		completion_reward = {
+			build_railway = {
+				level = 5
+				path = { 4797 1727 12525 1707 }
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_rail1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = VOR_economy_rail
+		}
+		completion_reward = {
+			build_railway = {
+				level = 5
+				path = { 4797 12540 10661 }
+			  }
+		}
+	}
+	focus = {
+		id = VOR_economy_rail2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = VOR_economy_rail1
+		}
+		completion_reward = {
+			build_railway = {
+				level = 5
+				path = { 10661 4815 12647 10596 1707 }
+			  }
+		}
+	}
+	focus = {
+		id = VOR_economy_rail3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 1
+		y = 4
+		prerequisite = {
+			focus = VOR_economy_rail2
+		}
+		completion_reward = {
+			984 = {
+				add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+				province = 10661
+				}
+			}
+			983 = {
+				add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+				province = 1707
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_infrastructure
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 7
+		y = 1
+		prerequisite = {
+			focus = VOR_start_economy
+		}
+		completion_reward = {
+			983 = {
+				add_building_construction = {
+				type = infrastructure
+				level = 4
+				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_infrastructure1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 7
+		y = 2
+		prerequisite = {
+			focus = VOR_economy_infrastructure
+		}
+		completion_reward = {
+			984 = {
+				add_building_construction = {
+				type = infrastructure
+				level = 4
+				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_infrastructure2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 7
+		y = 3
+		prerequisite = {
+			focus = VOR_economy_infrastructure1
+		}
+		completion_reward = {
+			566 = {
+				add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VOR_economy_science
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 7
+		y = 4
+		prerequisite = {
+			focus = VOR_economy_infrastructure2
+		}
+		completion_reward = {
+			add_research_slot = 3
+		}
+	}
+	focus = {
+		id = VOR_policy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 14
+		y = 0
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = VOR_policy_left
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 1
+		prerequisite = {
+			focus = VOR_policy
+		}
+		mutually_exclusive = {
+			focus = VOR_policy_right
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
+			add_stability = 0.25
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = VOR_policy_left1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 13
+		y = 2
+		prerequisite = {
+			focus = VOR_policy_left
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = KTA modifier = huge_increase }
+			add_opinion_modifier = { target = HEC modifier = huge_increase }
+
+			KTA = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+			HEC = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+		}
+	}
+	focus = {
+		id = VOR_policy_left2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 13
+		y = 3
+		prerequisite = {
+			focus = VOR_policy_left1
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = FLK modifier = huge_increase }
+			add_opinion_modifier = { target = XAM modifier = huge_increase }
+			add_opinion_modifier = { target = WER modifier = huge_increase }
+			add_opinion_modifier = { target = PSI modifier = huge_increase }
+
+			FLK = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+			XAM = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+			WER = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+			PSI = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+		}
+	}
+	focus = {
+		id = VOR_policy_left3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 13
+		y = 4
+		prerequisite = {
+			focus = VOR_policy_left2
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = ACK modifier = huge_increase }
+			add_opinion_modifier = { target = SAL modifier = huge_increase }
+			add_opinion_modifier = { target = NZR modifier = huge_increase }
+			add_opinion_modifier = { target = PSY modifier = huge_increase }
+
+			ACK = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+			SAL = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+			NZR = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+			PSY = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+		}
+	}
+	focus = {
+		id = VOR_policy_left11
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 2
+		available = {
+			has_opinion = {
+				target = HEC
+				value > 49
+			}
+		}
+		prerequisite = {
+			focus = VOR_policy_left
+		}
+		completion_reward = {
+			add_ideas = VOR_first
+			HEC = { add_ideas = VOR_help_army }
+		}
+	}
+	focus = {
+		id = VOR_policy_left22
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 3
+		available = {
+			has_opinion = {
+				target = KTA
+				value > 49
+			}
+		}
+		prerequisite = {
+			focus = VOR_policy_left11
+		}
+		completion_reward = {
+				remove_ideas = VOR_first
+				add_ideas = VOR_second
+				KTA = { add_ideas = VOR_help_army }
+		}
+	}
+	focus = {
+		id = VOR_policy_left33
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 4
+		available = {
+			has_opinion = {
+				target = WER
+				value > 49
+			}
+		}
+		prerequisite = {
+			focus = VOR_policy_left22
+		}
+		completion_reward = {
+				remove_ideas = VOR_second
+				add_ideas = VOR_finally
+				WER = { add_ideas = VOR_help_army }
+		}
+	}
+	focus = {
+		id = VOR_policy_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 15
+		y = 1
+		prerequisite = {
+			focus = VOR_policy
+		}
+		mutually_exclusive = {
+			focus = VOR_policy_left
+		}
+		completion_reward = {
+			add_ideas = VOR_vor
+			add_stability = 0.15
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = VOR_policy_right_1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 15
+		y = 2
+		prerequisite = {
+			focus = VOR_policy_right
+		}
+		completion_reward = {
+			declare_war_on = { type = annex_everything target = HEC }
+			hidden_effect = {
+				HEC = {
+				country_event = {
+					id = DEF_hec.1
+				}
+			}
+			}
+			
+		}
+	}
+	focus = {
+		id = VOR_policy_right_2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 15
+		y = 3
+		prerequisite = {
+			focus = VOR_policy_right_1
+		}
+		completion_reward = {
+			add_state_core = 985
+			add_state_core = 564
+		}
+	}
+	focus = {
+		id = VOR_policy_right_3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 15
+		y = 4
+		prerequisite = {
+			focus = VOR_policy_right_2
+		}
+		completion_reward = {
+			declare_war_on = { type = annex_everything target = KTA }
+		}
+	}
+	focus = {
+		id = VOR_policy_right_4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 15
+		y = 5
+		prerequisite = {
+			focus = VOR_policy_right_3
+		}
+		completion_reward = {
+			add_state_core = 563
+			add_state_core = 565
+		}
+	}
+	focus = {
+		id = VOR_policy_right_1_1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 2
+		prerequisite = {
+			focus = VOR_policy_right
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = FLK }
+			create_wargoal = { type = annex_everything target = WER }
+			create_wargoal = { type = annex_everything target = XAM }
+			create_wargoal = { type = annex_everything target = PSI }
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = VOR_policy_right_2_1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 3
+		prerequisite = {
+			focus = VOR_policy_right_1_1
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = ACK }
+			create_wargoal = { type = annex_everything target = SAL }
+			create_wargoal = { type = annex_everything target = NZR }
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = VOR_policy_right_3_1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 4
+		prerequisite = {
+			focus = VOR_policy_right_2_1
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_manpower = 50000
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = VOR_policy_right_4_1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 5
+		available = {
+			has_opinion = {
+				target = COM
+				value > 49
+			}
+		}
+		prerequisite = {
+			focus = VOR_policy_right_3_1
+		}
+		completion_reward = {
+				add_ideas = VOR_army_COM
+				COM = { add_ideas = VOR_army_COM }
+		}
+	}
+	focus = {
+		id = VOR_policy_right_final
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 6
+		available = {
+			has_war = no
+			564 = { is_owned_by = ROOT }
+			985 = { is_owned_by = ROOT }
+			563 = { is_owned_by = ROOT }
+			565 = { is_owned_by = ROOT }
+		}
+		prerequisite = {
+			focus = VOR_policy_right_4_1
+		}
+		prerequisite = {
+			focus = VOR_policy_right_4
+		}
+		completion_reward = {
+			add_ideas = VOR_warrior
+		}
+	}
+}

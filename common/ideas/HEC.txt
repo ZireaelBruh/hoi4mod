@@ -1,0 +1,99 @@
+ideas = {
+	# MILITARY
+	country = {
+		hec_commintern = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				puppet_cost_factor = -0.1
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+			}
+		}
+		hec_red_army = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
+		hec_com_debuff = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.03
+				army_attack_factor = -0.05
+			}
+		}
+		hec_dem_debuff = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				democratic_drift = 0.03
+				army_attack_factor = -0.05
+			}
+		}
+		hec_fas_debuff = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				fascism_drift = 0.03
+				army_attack_factor = -0.05
+			}
+		}
+		hec_neu_debuff = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				neutrality_drift = 0.03
+				army_attack_factor = -0.05
+			}
+		}
+		hec_great_reich_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				max_surrender_limit_offset = 0.1
+				army_attack_factor = 0.15
+			}
+		}
+		hec_reich_population_killer = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.05
+				war_support_weekly_factor = 0.05
+			}
+		}
+	hec_new_world = {
+		picture = political_violence
+		removal_cost = -1
+		modifier = {
+			puppet_cost_factor = -0.1
+			stability_weekly = -0.05
+			war_support_weekly_factor = 0.05
+			drift_defence_factor = 0.25
+		}
+	}
+	hec_tsar_military_idea = {
+		picture = political_violence
+		removal_cost = -1
+		modifier = {
+			army_defence_factor = 0.1
+			army_attack_factor = 0.1
+			lend_lease_tension = -1.0
+			annex_cost_factor = -0.05
+		}
+	}
+	hec_tsar = {
+		picture = political_violence
+		removal_cost = -1
+		modifier = {
+			guarantee_cost = -0.5
+			drift_defence_factor = 0.5
+			stability_weekly_factor = 0.05
+			political_power_factor = 0.15
+		}
+	}
+}
+}

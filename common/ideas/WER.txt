@@ -1,0 +1,47 @@
+ideas = {
+	# MILITARY
+	country = {
+		WER_dora = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				railway_gun_bombardment_factor = 1.0
+				fascism_acceptance = 50
+				war_support_weekly = 0.05
+			}
+		}
+		WER_machine = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 5.0
+				justify_war_goal_time = -0.5
+				production_speed_arms_factory_factor = 1.0
+			}
+		}
+		WER_tanks = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				army_armor_attack_factor = 0.2
+			}
+		}
+		WER_territory = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				global_building_slots = 25
+				acclimatization_cold_climate_gain_factor = 5.0
+				mobilization_speed = 0.25
+			}
+		}
+		WER_nuclear = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				nuclear_production = 1
+				nuclear_production_factor = 0.2
+			}
+		}
+	}
+}

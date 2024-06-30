@@ -1,0 +1,419 @@
+focus_tree = {
+	id = PSI
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PSI
+		}
+	}
+	default = no
+	focus = {
+		id = PSI_get_dictator
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 29
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = PSI_start_reforms
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 20
+		y = 1
+			prerequisite = {
+				focus = PSI_get_dictator
+			}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = PSI_resources
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 2
+			prerequisite = {
+				focus = PSI_start_reforms
+			}
+		completion_reward = {
+			537 = { add_resource = {
+				type = oil
+				amount = 25
+			}}
+		}
+	}
+	focus = {
+		id = PSI_resources2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 3
+			prerequisite = {
+				focus = PSI_resources
+			}
+		completion_reward = {
+			655 = { add_resource = {
+				type = oil
+				amount = 33
+			}}
+		}
+	}
+	focus = {
+		id = PSI_resources3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 4
+			prerequisite = {
+				focus = PSI_resources2
+			}
+		completion_reward = {
+			555 = { add_resource = {
+				type = oil
+				amount = 14
+			}}
+		}
+	}
+	focus = {
+		id = PSI_resources4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 5
+			prerequisite = {
+				focus = PSI_resources3
+			}
+		completion_reward = {
+			560 = { add_resource = {
+				type = steel
+				amount = 37
+			}}
+		}
+	}
+	focus = {
+		id = PSI_communism
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 2
+			prerequisite = {
+				focus = PSI_start_reforms
+			}
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+			remove_ideas = PSI_political_disputes
+		}
+	}
+	focus = {
+		id = PSI_communism_peace
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 3
+			prerequisite = {
+				focus = PSI_communism
+			}
+		completion_reward = {
+			add_political_power = 100
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+			remove_ideas = PSI_monoparty
+		}
+	}
+	focus = {
+		id = PSI_communism_factory
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 4
+			prerequisite = {
+				focus = PSI_communism_peace
+			}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PSI_communism_factory2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 5
+			prerequisite = {
+				focus = PSI_communism_factory
+			}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PSI_communism_peace2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 3
+			prerequisite = {
+				focus = PSI_communism
+			}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 25000
+			}
+		}
+	}
+	focus = {
+		id = PSI_communism_scientists
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 4
+			prerequisite = {
+				focus = PSI_communism_peace2
+			}
+		completion_reward = {
+			add_ideas = PSI_communist_scientists
+		}
+	}
+	focus = {
+		id = PSI_communism_nukes
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 5
+			prerequisite = {
+				focus = PSI_communism_scientists
+			}
+		completion_reward = {
+			add_ideas = PSI_communist_nukes
+			add_tech_bonus = {
+				name = nukes
+				bonus = 5
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	focus = {
+		id = PSI_communism_guarantee
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 5
+			prerequisite = {
+				focus = PSI_communism_scientists
+			}
+		completion_reward = {
+			remove_ideas = PSI_dictator
+			give_guarantee = XAM
+			give_guarantee = WER
+			give_guarantee = KTA
+			give_guarantee = FLK
+			give_guarantee = PSY
+			give_guarantee = HEC
+			give_guarantee = VOR
+			give_guarantee = MON
+			give_guarantee = SAL
+		}
+	}
+	focus = {
+		id = PSI_start_military
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 2
+			prerequisite = {
+				focus = PSI_start_reforms
+			}
+		completion_reward = {
+			add_war_support = 0.25
+		}
+	}
+	focus = {
+		id = PSI_start_military_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 3
+			prerequisite = {
+				focus = PSI_start_military
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 3.0
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 3.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 3.0
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = PSI_start_military_right2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 4
+			prerequisite = {
+				focus = PSI_start_military_right
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = cat_anti_tank
+			}
+		}
+	}
+	focus = {
+		id = PSI_start_military_right3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 5
+			prerequisite = {
+				focus = PSI_start_military_right2
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = air_equipment
+			}
+		}
+	}
+	focus = {
+		id = PSI_start_military_complete
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 6
+			prerequisite = {
+				focus = PSI_start_military_right3
+			}
+			prerequisite = {
+				focus = PSI_start_military4
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 3
+				category = cat_heavy_armor
+			}
+		}
+	}
+	focus = {
+		id = PSI_start_military2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 3
+			prerequisite = {
+				focus = PSI_start_military
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = PSI_start_military3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 4
+			prerequisite = {
+				focus = PSI_start_military2
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 3
+				uses = 1
+				category = infantry_weapons
+		}
+		}
+	}
+	focus = {
+		id = PSI_start_military4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 5
+			prerequisite = {
+				focus = PSI_start_military3
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 3
+				uses = 1
+				category = armor
+		}
+		}
+	}
+}

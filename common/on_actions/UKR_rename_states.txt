@@ -1,0 +1,246 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			##DONETSK##
+			if = {
+				limit = {
+				    FROM.FROM = { state = 227 }
+					227 = { NOT = { has_state_flag = GEL_Donetsk }}
+					ROOT = {
+						is_UKR_country = no
+					}
+				}
+				227 = { set_state_name = STATE_227_GEL }
+				set_province_name = { id = 6474 name = "VP_6474_GEL" }
+				set_province_name = { id = 6420 name = "VP_6420_GEL" }
+			    227 = { set_state_flag = GEL_Donetsk }
+			}
+			
+			if = {
+				limit = {
+					FROM.FROM = { state = 227 }
+					227 = { has_state_flag = GEL_Donetsk }
+					ROOT = {
+						is_UKR_country = yes
+					}
+				}
+				227 = { reset_state_name = yes }
+				reset_province_name = 6474
+				reset_province_name = 6420
+			    227 = { clr_state_flag = GEL_Donetsk }
+			}
+			##########################
+			if = {
+				limit = {
+				    FROM.FROM = { state = 228 }
+					228 = { NOT = { has_state_flag = GEL_Lugansk }}
+					ROOT = {
+						is_UKR_country = no
+					}
+				}
+				228 = { set_state_name = STATE_228_GEL }
+				set_province_name = { id = 9461 name = "VP_9461_GEL" }
+			    228 = { set_state_flag = GEL_Lugansk }
+			}
+			
+			if = {
+				limit = {
+					FROM.FROM = { state = 228 }
+					228 = { has_state_flag = GEL_Lugansk }
+					ROOT = {
+						is_UKR_country = yes
+					}
+				}
+				228 = { reset_state_name = yes }
+				reset_province_name = 9461
+			    228 = { clr_state_flag = GEL_Lugansk }
+			}
+			#############################
+			if = {
+				limit = {
+				    FROM.FROM = { state = 221 }
+					221 = { NOT = { has_state_flag = GEL_Kharkiv }}
+					ROOT = {
+						is_UKR_country = no
+					}
+				}
+				221 = { set_state_name = STATE_221_GEL }
+				set_province_name = { id = 418 name = "VP_418_GEL" }
+			    221 = { set_state_flag = GEL_Kharkiv }
+			}
+			
+			if = {
+				limit = {
+					FROM.FROM = { state = 221 }
+					221 = { has_state_flag = GEL_Kharkiv }
+					ROOT = {
+						is_UKR_country = yes
+					}
+				}
+				221 = { reset_state_name = yes }
+				reset_province_name = 418
+			    221 = { clr_state_flag = GEL_Kharkiv }
+			}
+			#############################
+			if = {
+				limit = {
+				    FROM.FROM = { state = 200 }
+					200 = { NOT = { has_state_flag = GEL_Zaporozhie }}
+					ROOT = {
+						is_UKR_country = no
+					}
+				}
+				200 = { set_state_name = STATE_200_GEL }
+				set_province_name = { id = 11405 name = "VP_11405_GEL" }
+			    200 = { set_state_flag = GEL_Zaporozhie }
+			}
+			
+			if = {
+				limit = {
+					FROM.FROM = { state = 200 }
+					200 = { has_state_flag = GEL_Zaporozhie }
+					ROOT = {
+						is_UKR_country = yes
+					}
+				}
+				200 = { reset_state_name = yes }
+				reset_province_name = 11405
+			    200 = { clr_state_flag = GEL_Zaporozhie }
+			}
+			#############################
+			if = {
+				limit = {
+				    FROM.FROM = { state = 225 }
+					225 = { NOT = { has_state_flag = GEL_Sumi }}
+					ROOT = {
+						is_UKR_country = no
+					}
+				}
+				225 = { set_state_name = STATE_225_GEL }
+				set_province_name = { id = 3520 name = "VP_3520_GEL" }
+				set_province_name = { id = 9566 name = "VP_9566_GEL" }
+			    225 = { set_state_flag = GEL_Sumi }
+			}
+			
+			if = {
+				limit = {
+					FROM.FROM = { state = 225 }
+					225 = { has_state_flag = GEL_Sumi }
+					ROOT = {
+						is_UKR_country = yes
+					}
+				}
+				225 = { reset_state_name = yes }
+				reset_province_name = 3520
+				reset_province_name = 9566
+			    225 = { clr_state_flag = GEL_Sumi }
+			}
+			#############################
+			if = {
+				limit = {
+				    FROM.FROM = { state = 226 }
+					226 = { NOT = { has_state_flag = GEL_Dnipro }}
+					ROOT = {
+						is_UKR_country = no
+					}
+				}
+				226 = { set_state_name = STATE_226_GEL }
+				set_province_name = { id = 11437 name = "VP_11437_GEL" }
+				set_province_name = { id = 11561 name = "VP_11561_GEL" }
+			    226 = { set_state_flag = GEL_Dnipro }
+			}
+			
+			if = {
+				limit = {
+					FROM.FROM = { state = 226 }
+					226 = { has_state_flag = GEL_Dnipro }
+					ROOT = {
+						is_UKR_country = yes
+					}
+				}
+				226 = { reset_state_name = yes }
+				reset_province_name = 11437
+				reset_province_name = 11561
+			    226 = { clr_state_flag = GEL_Dnipro }
+			}
+			#############################
+			if = {
+				limit = {
+				    FROM.FROM = { state = 193 }
+					193 = { NOT = { has_state_flag = GEL_Chernigiv }}
+					ROOT = {
+						is_UKR_country = no
+					}
+				}
+				193 = { set_state_name = STATE_193_GEL }
+				set_province_name = { id = 3568 name = "VP_3568_GEL" }
+			    193 = { set_state_flag = GEL_Chernigiv }
+			}
+			
+			if = {
+				limit = {
+					FROM.FROM = { state = 193 }
+					193 = { has_state_flag = GEL_Chernigiv }
+					ROOT = {
+						is_UKR_country = yes
+					}
+				}
+				193 = { reset_state_name = yes }
+				reset_province_name = 3568
+			    193 = { clr_state_flag = GEL_Chernigiv }
+			}
+			#############################
+			if = {
+				limit = {
+				    FROM.FROM = { state = 202 }
+					202 = { NOT = { has_state_flag = GEL_Kyiv }}
+					ROOT = {
+						is_UKR_country = no
+					}
+				}
+				202 = { set_state_name = STATE_202_GEL }
+				set_province_name = { id = 525 name = "VP_525_GEL" }
+			    202 = { set_state_flag = GEL_Kyiv }
+			}
+			
+			if = {
+				limit = {
+					FROM.FROM = { state = 202 }
+					202 = { has_state_flag = GEL_Kyiv }
+					ROOT = {
+						is_UKR_country = yes
+					}
+				}
+				202 = { reset_state_name = yes }
+				reset_province_name = 525
+			    202 = { clr_state_flag = GEL_Kyiv }
+			}
+			#############################
+			if = {
+				limit = {
+				    FROM.FROM = { state = 197 }
+					197 = { NOT = { has_state_flag = GEL_Mikolay }}
+					ROOT = {
+						is_UKR_country = no
+					}
+				}
+				197 = { set_state_name = STATE_197_GEL }
+				set_province_name = { id = 11683 name = "VP_11683_GEL" }
+			    197 = { set_state_flag = GEL_Mikolay }
+			}
+			
+			if = {
+				limit = {
+					FROM.FROM = { state = 197 }
+					197 = { has_state_flag = GEL_Mikolay }
+					ROOT = {
+						is_UKR_country = yes
+					}
+				}
+				197 = { reset_state_name = yes }
+				reset_province_name = 11683
+			    197 = { clr_state_flag = GEL_Mikolay }
+			}
+		}
+	}
+}

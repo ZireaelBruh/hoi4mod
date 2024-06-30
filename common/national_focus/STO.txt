@@ -1,0 +1,1227 @@
+focus_tree = {
+	id = STO
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = STO
+		}
+	}
+	default = no
+	focus = {
+		id = STO_start
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = STO_left
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 1
+		prerequisite = {
+			focus = STO_start
+		}
+		mutually_exclusive = {
+			focus = STO_center
+			focus = STO_right
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				long_name = STO_party_f_long
+				name = STO_party_f
+			}
+			add_war_support = 0.2
+			add_stability = -0.05
+			set_leader_name = STO_RUS_fascism_leader
+		}
+	}
+	focus = {
+		id = STO_economy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = STO_start
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = STO_economy
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = STO_economy
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = STO_economy1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = STO_economy
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+		}
+	}
+	focus = {
+		id = STO_economy1_1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = STO_economy1
+		}
+		completion_reward = {
+			add_ideas = STO_prod1
+		}
+	}
+	focus = {
+		id = STO_economy1_2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 2
+		y = 4
+		prerequisite = {
+			focus = STO_economy1_1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				528 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_category = megalopolis
+					}
+			add_ideas = STO_prod2
+		}
+	}
+	focus = {
+		id = STO_economy1_3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 2
+		y = 5
+		prerequisite = {
+			focus = STO_economy1_2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = STO_economy
+				bonus = 3
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = nukes
+				bonus = 1
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	focus = {
+		id = STO_economy2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 4
+		y = 2
+		prerequisite = {
+			focus = STO_economy
+		}
+		completion_reward = {
+			air_experience = 100
+			add_tech_bonus = {
+				name = STO_air_doctrine
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = STO_economy2_2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 4
+		y = 3
+		prerequisite = {
+			focus = STO_economy2
+		}
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = STO_economy
+				bonus = 1
+				uses = 2
+				category = light_air
+			}
+			add_tech_bonus = {
+				name = STO_economy
+				bonus = 1
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = STO_economy3_navy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STO_start
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = STO_dd_tech
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+			navy_experience = 50
+		}
+	}
+	focus = {
+		id = STO_economy3_2_navy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = STO_economy3_navy
+		}
+		completion_reward = {
+				add_tech_bonus = {
+					name = STO_cl_tech
+					bonus = 1
+					uses = 2
+					category = cl_tech
+				}
+				add_tech_bonus = {
+					name = STO_bc_tech
+					bonus = 1
+					uses = 2
+					category = bb_tech
+				}
+				navy_experience = 50
+		}
+	}
+	focus = {
+		id = STO_economy3_3_navy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = STO_economy3_2_navy
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = STO_bb_tech
+				bonus = 1
+				uses = 1
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = STO_cv_tech
+				bonus = 1
+				uses = 2
+				category = cv_tech
+			}
+			navy_experience = 100
+		}
+	}
+	focus = {
+		id = STO_economy3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = STO_start
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = STO_armor
+				bonus = 1
+				uses = 2
+				category = armor
+			}
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = STO_economy3_2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 6
+		y = 3
+		prerequisite = {
+			focus = STO_economy3
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					name = STO_artillery
+					bonus = 1
+					uses = 1
+					category = artillery
+				}
+		}
+	}
+	focus = {
+		id = STO_economy3_3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 6
+		y = 4
+		prerequisite = {
+			focus = STO_economy3_2
+		}
+		completion_reward = {
+			army_experience = 100
+			add_tech_bonus = {
+				name = STO_armor
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = STO_artillery
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = STO_left1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 2
+		prerequisite = {
+			focus = STO_left
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = STO_left2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 3
+		prerequisite = {
+			focus = STO_left1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+			}
+		}
+	}
+	focus = {
+		id = STO_left3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 4
+		prerequisite = {
+			focus = STO_left2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					name = STO_navy1
+					bonus = 3
+					uses = 1
+					category = cl_tech
+				}
+				add_tech_bonus = {
+					name = STO_navy2
+					bonus = 3
+					uses = 1
+					category = cv_tech
+				}
+		}
+	}
+	focus = {
+		id = STO_left2_left
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 9
+		y = 5
+		prerequisite = {
+			focus = STO_left3
+		}
+		mutually_exclusive = {
+			focus = STO_left3_right
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = STO_marine
+				bonus = 1
+				uses = 2
+				category = marine_tech
+			}
+			navy_experience = 50
+		}
+	}
+	focus = {
+		id = STO_left3_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 5
+		prerequisite = {
+			focus = STO_left3
+		}
+		mutually_exclusive = {
+			focus = STO_left2_left
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = STO_marine
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+	}
+		}
+	}
+	focus = {
+		id = STO_left4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 4.4
+		x = 10
+		y = 6
+		prerequisite = {
+			focus = STO_left2_left
+			focus = STO_left3_right
+		}
+		completion_reward = {
+			navy_experience = 50
+			army_experience = 50
+			air_experience = 50
+		}
+	}
+	focus = {
+		id = STO_left5_left
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 8
+		y = 7
+		prerequisite = {
+			focus = STO_left4
+		}
+		mutually_exclusive = {
+			focus = STO_left5_center
+			focus = STO_left5_right
+		}
+		completion_reward = {
+			declare_war_on = { type = annex_everything target = PSI }
+			add_timed_idea = {
+				idea = STO_debuff_PSI_attack
+				days = 90
+			}
+		}
+	}
+	focus = {
+		id = STO_left6_left
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 4.4
+		x = 8
+		y = 8
+		prerequisite = {
+			focus = STO_left5_left
+		}
+		completion_reward = {
+			560 = {
+				add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+				province = 7748
+				}
+			}
+		}
+	}
+	focus = {
+		id = STO_left7_left
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 7
+		y = 11
+		prerequisite = {
+			focus = STO_left6_left
+		}
+		completion_reward = {
+			declare_war_on = { type = annex_everything target = WER }
+		}
+	}
+	focus = {
+		id = STO_left7_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 9
+		y = 11
+		prerequisite = {
+			focus = STO_left6_left
+		}
+		completion_reward = {
+			declare_war_on = { type = annex_everything target = XAM }
+		}
+	}
+	focus = {
+		id = STO_left7_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 8
+		y = 12
+		prerequisite = {
+			focus = STO_left7_left
+		}
+		prerequisite = {
+			focus = STO_left7_right
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = XAM
+					}
+				}
+				add_core_of = ROOT
+				add_manpower = -500000
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = WER
+					}
+				}
+				add_core_of = ROOT
+				add_manpower = -100000
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = industrial_complex
+						level = 5
+						instant_build = yes
+					}
+			}
+		}
+	}
+	focus = {
+		id = STO_left8_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 8
+		y = 13
+		prerequisite = {
+			focus = STO_left7_center
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = KTA }
+		}
+	}
+	focus = {
+		id = STO_left9_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 8
+		y = 14
+		prerequisite = {
+			focus = STO_left8_center
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = FLK }
+		}
+	}
+	focus = {
+		id = STO_left10_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 8
+		y = 15
+		prerequisite = {
+			focus = STO_left9_center
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = HEC }
+		}
+	}
+	focus = {
+		id = STO_left11_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 8
+		y = 16
+		prerequisite = {
+			focus = STO_left10_center
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = VOR }
+		}
+	}
+	focus = {
+		id = STO_left12_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 8
+		y = 17
+		prerequisite = {
+			focus = STO_left11_center
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = VOR
+						is_core_of = HEC
+						is_core_of = KTA
+						is_core_of = FLK
+					}
+				}
+				add_core_of = ROOT
+				add_manpower = -100000
+			}
+		}
+	}
+	focus = {
+		id = STO_left5_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 20
+		x = 10
+		y = 7
+		prerequisite = {
+			focus = STO_left4
+		}
+		mutually_exclusive = {
+			focus = STO_left5_right
+			focus = STO_left5_left
+		}
+		completion_reward = {
+			declare_war_on = { type = annex_everything target = PSI }
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+			}
+			add_ideas = STO_buff_PSI_attack
+			create_corps_commander = {
+				name = "Джонни Дэпп"
+				gfx = GFX_portrait_chi_alexander_von_falkenhausen
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 4
+				legacy_id = 603
+				traits = { infantry_officer }
+			}
+		}
+	}
+	focus = {
+		id = STO_left6_center_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 12
+		prerequisite = {
+			focus = STO_left5_center
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = STO_attack_f_gen2
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = STO_left7_center_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 13
+		prerequisite = {
+			focus = STO_left6_center_center
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = KOR }
+			create_wargoal = { type = annex_everything target = PSI }
+			create_wargoal = { type = annex_everything target = WER }
+			create_wargoal = { type = annex_everything target = XAM }
+		}
+	}
+	focus = {
+		id = STO_left8_center_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 14
+		prerequisite = {
+			focus = STO_left7_center_center
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = arms_factory
+						level = 5
+						instant_build = yes
+					}
+			}
+			army_experience = 100
+			add_tech_bonus = {
+				name = STO_land
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = STO_left9_center_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 4.4
+		x = 10
+		y = 15
+		prerequisite = {
+			focus = STO_left8_center_center
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = STO_attack_f_gen3
+				days = 90
+			}
+		}
+	}
+	focus = {
+		id = STO_left10_center_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 16
+		prerequisite = {
+			focus = STO_left9_center_center
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = KOR
+						is_core_of = PSI
+					}
+				}
+				add_core_of = ROOT
+				add_manpower = -12000
+			}
+		}
+	}
+	focus = {
+		id = STO_left11_center_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 17
+		prerequisite = {
+			focus = STO_left10_center_center
+		}
+		completion_reward = {
+			add_stability = 0.1
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = industrial_complex
+						level = 5
+						instant_build = yes
+					}
+			}
+		}
+	}
+	focus = {
+		id = STO_left5_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 52.2
+		x = 12
+		y = 7
+		prerequisite = {
+			focus = STO_left4
+		}
+		mutually_exclusive = {
+			focus = STO_left5_center
+			focus = STO_left5_left
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = arms_factory
+						level = 5
+						instant_build = yes
+					}
+			}
+			create_corps_commander = {
+				name = "Иосифф Мальборо"
+				gfx = GFX_portrait_chi_alexander_von_falkenhausen
+				skill = 5
+				attack_skill = 4
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 8
+				legacy_id = 603
+				traits = { infantry_officer }
+			}
+			add_timed_idea = {
+				idea = STO_attack_f_gen
+				days = 90
+			}
+			declare_war_on = { type = annex_everything target = PSI }
+		}
+	}
+	focus = {
+		id = STO_left6_right_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 12
+		prerequisite = {
+			focus = STO_left5_right
+		}
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = STO_navy_doctrine
+				bonus = 1
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = STO_left7_right_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 4.4
+		x = 12
+		y = 13
+		prerequisite = {
+			focus = STO_left6_right_right
+		}
+		completion_reward = {
+			declare_war_on = { type = annex_everything target = KOR }
+		}
+	}
+	focus = {
+		id = STO_left8_right_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 14
+		prerequisite = {
+			focus = STO_left7_right_right
+		}
+		completion_reward = {
+			navy_experience = 100
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+		}
+	}
+	focus = {
+		id = STO_left9_right_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 15
+		prerequisite = {
+			focus = STO_left8_right_right
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = WER modifier = huge_increase }
+			add_opinion_modifier = { target = XAM modifier = huge_increase }
+
+			WER = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+			XAM = { add_opinion_modifier = { target = ROOT modifier = huge_increase } }
+		}
+	}
+	focus = {
+		id = STO_left10_right_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 16
+		prerequisite = {
+			focus = STO_left9_right_right
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = ROOT
+					}
+				}
+				add_state_modifier = {
+					modifier = {
+						local_resources = 0.4
+					}
+				}
+			}
+			add_ideas = STO_export
+		}
+	}
+	focus = {
+		id = STO_left11_right_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 17
+		prerequisite = {
+			focus = STO_left10_right_right
+		}
+		completion_reward = {
+				random_owned_controlled_state = {
+					add_resource = {
+						type = steel
+						amount = 34
+					}
+			}
+				random_owned_controlled_state = {
+					add_resource = {
+						type = tungsten
+						amount = 12
+					}
+			}
+				random_owned_controlled_state = {
+					add_resource = {
+						type = oil
+						amount = 20
+					}
+			}
+		}
+	}
+	focus = {
+		id = STO_left12_right_right2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 18
+		prerequisite = {
+			focus = STO_left11_right_right
+		}
+		completion_reward = {
+				WER = {
+					country_event = {
+					id = STO.1
+					}
+				}
+				XAM = {
+					country_event = {
+					id = STO.1
+					}
+				}
+		}
+	}
+	focus = {
+		id = STO_left12_right_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 9
+		y = 18
+		prerequisite = {
+			focus = STO_left11_center_center
+			focus = STO_left12_center
+		}
+		completion_reward = {
+			set_cosmetic_tag = STO_Great_Reich
+			add_ideas = STO_reich
+		}
+	}
+	focus = {
+		id = STO_left12_right_right_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 9
+		y = 19
+		prerequisite = {
+			focus = STO_left12_right_right
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = SAL }
+			create_wargoal = { type = annex_everything target = PSY }
+			create_wargoal = { type = annex_everything target = ACK }
+		}
+	}
+	focus = {
+		id = STO_left12_right_right_center2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 9
+		y = 20
+		prerequisite = {
+			focus = STO_left12_right_right_center
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = ROOT
+					}
+				}
+				add_state_modifier = {
+					modifier = {
+						local_resources = 0.5
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = STO_center
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 1
+		prerequisite = {
+			focus = STO_start
+		}
+		mutually_exclusive = {
+			focus = STO_left
+			focus = STO_right
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = STO_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 30
+		y = 1
+		prerequisite = {
+			focus = STO_start
+		}
+		mutually_exclusive = {
+			focus = STO_left
+			focus = STO_center
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = STO_resouces
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 40
+		y = 1
+		prerequisite = {
+			focus = STO_start
+		}
+		completion_reward = {
+			add_ideas = STO_resouces_f
+		}
+	}
+	focus = {
+		id = STO_resouces2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 40
+		y = 2
+		prerequisite = {
+			focus = STO_resouces
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+		}
+	}
+	focus = {
+		id = STO_resouces3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 40
+		y = 3
+		prerequisite = {
+			focus = STO_resouces2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = aluminium
+					amount = 15
+				}
+			}
+		}
+	}
+	focus = {
+		id = STO_resouces4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 40
+		y = 4
+		prerequisite = {
+			focus = STO_resouces3
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = aluminium
+					amount = 10
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+			}
+		}
+	}
+	focus = {
+		id = STO_resouces2_1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 42
+		y = 1
+		prerequisite = {
+			focus = STO_start
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = STO_resouces2_2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 42
+		y = 2
+		available = {
+			num_of_civilian_factories > 30
+		}
+		prerequisite = {
+			focus = STO_resouces2_1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = STO_resouces2_3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 42
+		y = 3
+		available = {
+			num_of_civilian_factories > 40
+		}
+		prerequisite = {
+			focus = STO_resouces2_2
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+}

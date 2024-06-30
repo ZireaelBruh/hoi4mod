@@ -1,0 +1,12 @@
+ideas = {
+	country = {
+        FLK_construction = {
+			removal_cost = -1
+            picture = usa_great_depression_3
+            modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.5
+			}
+		}
+	}
+}

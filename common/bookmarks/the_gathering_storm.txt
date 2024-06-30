@@ -1,0 +1,68 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "VPA"
+		default = yes
+		
+		"VPA" = {
+			history = "OTHER_GATHERING_STORM_DESC"
+			ideology = communism
+		}
+
+		"COM" = {
+			history = "OTHER_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				COM_cyki
+				COM_ryka
+				COM_ostatok
+				COM_promka
+			}
+		}
+
+		"KIL" = {
+			history = "OTHER_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				kil_separatism
+				kil_garrison
+			}
+		}
+
+		"VOR"   = {
+			history = "OTHER_GATHERING_STORM_DESC"
+			ideology = fascism
+		}
+
+		"WER" = {
+			history = "OTHER_GATHERING_STORM_DESC"
+			ideology = fascism
+		}
+
+		"GEL" = {
+			history = "OTHER_GATHERING_STORM_DESC"
+			ideology = communism
+		}
+
+		"PSI" ={
+			history = "OTHER_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				PSI_political_disputes
+				PSI_monoparty
+				PSI_dictator
+			}
+		}
+		"STO" = {
+			history = "OTHER_GATHERING_STORM_DESC"
+			ideology = neutrality
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

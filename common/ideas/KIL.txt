@@ -1,0 +1,149 @@
+ideas = {
+	# MILITARY
+	country = {
+		kil_separatism = {
+			picture = masters_of_our_own_fate
+			removal_cost = -1
+			
+				modifier = {
+					compliance_growth_on_our_occupied_states = 0.5
+					resistance_growth_on_our_occupied_states = -0.5
+					resistance_decay_on_our_occupied_states = 0.5
+					resistance_damage_to_garrison_on_our_occupied_states = -0.5
+					resistance_target_on_our_occupied_states = -0.5
+			}
+		}
+
+		kil_garrison = {
+			picture = jap_zaibatsu_control
+			removal_cost = -1
+
+			modifier = {
+				occupation_cost = -0.05
+				required_garrison_factor = -0.05
+			}
+		}
+		kil_marodeur = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				equipment_capture_factor = 0.05
+			}
+		}
+		KIL_ata = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+                army_defence_factor = -0.1
+			}
+		}
+		KIL_ata2 = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.15
+                planning_speed = 0.3
+				max_planning = 0.2
+				production_speed_arms_factory_factor = 0.2
+			}
+		}
+		KIL_ata3 = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = 0.1
+				army_org_factor = 0.1
+				army_attack_factor = 0.1
+                army_defence_factor = -0.1
+			}
+		}
+		KIL_ata4 = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				non_core_manpower = 0.1
+			}
+		}
+		KIL_ata5 = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				compliance_gain = 0.02
+				resistance_target = -0.1
+			}
+		}
+		KIL_prod = {
+			picture = political_violence
+			removal_cost = -1
+				equipment_bonus = {
+					infantry_equipment = {
+						build_cost_ic = -0.1
+						instant = yes
+					}
+			}
+		}
+		KIL_prod1 = {
+			picture = political_violence
+			removal_cost = -1
+				modifier = {
+					production_factory_max_efficiency_factor = 0.1
+					industrial_capacity_factory = 0.1
+				}
+			}
+		KIL_prod2 = {
+			picture = political_violence
+			removal_cost = -1
+				modifier = {
+					army_defence_factor = 0.1
+					production_speed_buildings_factor = 0.1
+				}
+			}
+			KIL_prod3 = {
+				picture = political_violence
+				removal_cost = -1
+					modifier = {
+						consumer_goods_factor = -0.05
+					}
+				}
+		KIL_wars = {
+			picture = political_violence
+			removal_cost = -1
+				modifier = {
+					justify_war_goal_time = -0.7
+				}
+			}
+		KIL_supply = {
+			picture = political_violence
+			removal_cost = -1
+				modifier = {
+					supply_consumption_factor = -0.1
+					army_attack_factor = -0.05
+                	army_defence_factor = 0.15
+					army_org_factor = 0.2
+					conscription_factor = -0.1
+				}
+		}
+		KIL_supply2 = {
+			picture = political_violence
+			removal_cost = -1
+				modifier = {
+					compliance_gain = 0.01
+					resistance_target = -0.1
+					industrial_capacity_dockyard = 2
+					production_speed_industrial_complex_factor = 0.3
+					non_core_manpower = 0.03
+				}
+		}
+		KIL_sci = {
+			picture = political_violence
+			removal_cost = -1
+				modifier = {
+					research_speed_factor = 0.15
+				}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+capital = 563
+
+oob = "KTA_1936"
+
+set_convoys = 0
+
+add_ideas = {
+	KTA_emmigration
+	KTA_without_war_production
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+
+
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 22
+	fascism = 4
+	communism = 4
+	neutrality = 70
+}
+
+create_country_leader = {
+	name = "Си Цзиньпин"
+	desc = "POLITICS_JOSEPH_STALIN_DESC"
+	picture = "KTA_communism.dds"
+	expire = "1953.3.1"
+	ideology = stalinism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Цзян Цзэминя"
+	desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
+	picture = "KTA_fascism.dds"
+	expire = "1953.3.1"
+	ideology = fascism_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Юань Шикай"
+	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+	picture = "KTA_democratic.dds"
+	expire = "1953.3.1"
+	ideology = socialism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Янь Цзягань"
+	desc = "POLITICS_HAILE_SELASSIE_DESC"
+	picture = "KTA_neutrality.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+
+	}
+}

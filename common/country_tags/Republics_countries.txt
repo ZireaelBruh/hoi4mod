@@ -1,0 +1,5 @@
+NVR = "countries/Novorossiya.txt"
+ODS = "countries/Odessa.txt"
+LNR = "countries/LNR.txt"
+DNR = "countries/DNR.txt"
+KHE = "countries/Kherson.txt"

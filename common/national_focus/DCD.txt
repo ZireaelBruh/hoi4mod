@@ -1,0 +1,2435 @@
+focus_tree = {
+	id = DCD
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = DCD
+		}
+	}
+	default = no
+	focus = {
+		id = DCD_get_dictator
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 20
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = DCD_start_construction_projects
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 20
+		y = 1
+			prerequisite = {
+				focus = DCD_get_dictator
+			}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = DCD_razdel_or_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 18
+		y = 2
+			prerequisite = {
+				focus = DCD_start_construction_projects
+			}
+		completion_reward = {
+			DKK = {
+				country_event = {
+					id = DCD_integrate_deal.1
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_left
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 3
+		available = {
+			has_war = no
+		}
+			prerequisite = {
+				focus = DCD_razdel_or_war
+			}
+			mutually_exclusive = {
+				focus = DCD_ukraine_right
+			}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = DCD_ukraine_left_ukraine
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 4
+			prerequisite = {
+				focus = DCD_ukraine_left
+			}
+		completion_reward = {
+			UKR = {
+				division_template = {
+					name = "Separatists"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+					}
+				}
+				227 = {
+					transfer_state_to = UKR
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+				}
+				228 = {
+					transfer_state_to = UKR
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = huge_increase }
+			}
+			add_opinion_modifier = { target = UKR modifier = huge_increase }
+			give_guarantee = UKR
+		}
+	}
+	focus = {
+		id = DCD_ukraine_left_ukraine2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 16
+		y = 5
+		available = {
+			has_equipment = {
+				infantry_equipment > 19999
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_left_ukraine
+			}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -20000
+			}
+			UKR = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 20000
+				}
+				227 = {
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					add_building_construction = { type = bunker level = 3 instant_build = yes province = 3466 }
+					add_building_construction = { type = bunker level = 3 instant_build = yes province = 502 }
+					add_building_construction = { type = bunker level = 3 instant_build = yes province = 3491 }
+					add_building_construction = { type = bunker level = 3 instant_build = yes province = 3449 }
+					add_building_construction = { type = bunker level = 3 instant_build = yes province = 6776 }
+					add_building_construction = { type = bunker level = 6 instant_build = yes province = 6420 }
+					add_building_construction = { type = bunker level = 6 instant_build = yes province = 6474 }
+				}
+				228 = {
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = UKR
+					}
+					add_building_construction = { type = bunker level = 3 instant_build = yes province = 11487 }
+					add_building_construction = { type = bunker level = 3 instant_build = yes province = 570 }
+					add_building_construction = { type = bunker level = 3 instant_build = yes province = 3491 }
+					add_building_construction = { type = bunker level = 6 instant_build = yes province = 9461 }
+				}
+				add_opinion_modifier = { target = ROOT modifier = huge_increase }
+			}
+			add_opinion_modifier = { target = UKR modifier = huge_increase }
+		}
+	}
+	focus = {
+		id = DCD_ukraine_left_ukraine3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 6
+			prerequisite = {
+				focus = DCD_ukraine_left_ukraine2
+			}
+		completion_reward = {
+			UKR = {
+				declare_war_on = { type = annex_everything target = ANA }
+				declare_war_on = { type = annex_everything target = GEL }
+				add_ideas = DCD_dead
+			}
+			GEL = { add_ideas = DCD_dead }
+			ANA = { add_ideas = DCD_dead }
+		}
+	}
+	focus = {
+		id = DCD_ukraine_left_ukraine4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 7
+		available = {
+			UKR = {
+				has_war = no
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_left_ukraine3
+			}
+		completion_reward = {
+				puppet = UKR
+		}
+	}
+	focus = {
+		id = DCD_ukraine_left_ukraine6
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 14
+		y = 7
+		available = {
+			has_war = no
+		}
+			prerequisite = {
+				focus = DCD_ukraine_left_ukraine3
+			}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = ANA
+			}
+			declare_war_on = {
+				type = annex_everything
+				target = GEL
+			}
+			UKR = {
+				give_military_access = ROOT
+				add_opinion_modifier = { target = ROOT modifier = huge_increase }
+			}
+			add_opinion_modifier = { target = UKR modifier = huge_increase }
+		}
+	}
+	focus = {
+		id = DCD_ukraine_left_ukraine5
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 8
+		available = {
+			has_war = no
+		}
+			prerequisite = {
+				focus = DCD_ukraine_left_ukraine4
+			}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				add_core_of = ROOT
+			}
+				annex_country = {
+					target = UKR
+					transfer_troops = yes
+				}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 3
+		available = {
+			has_war = no
+		}
+			prerequisite = {
+				focus = DCD_razdel_or_war
+			}
+			mutually_exclusive = {
+				focus = DCD_ukraine_left
+			}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 4
+			prerequisite = {
+				focus = DCD_ukraine_right
+			}
+			mutually_exclusive = {
+				focus = DCD_ukraine_right_war
+			}
+		completion_reward = {
+			GEL = {
+				add_stability = -0.25
+			}
+			ANA = {
+				add_stability = -0.25
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 4
+			prerequisite = {
+				focus = DCD_ukraine_right
+			}
+			mutually_exclusive = {
+				focus = DCD_ukraine_right_ukr
+			}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GEL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ANA
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 18
+		y = 5
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr
+			}
+			mutually_exclusive = {
+				focus = DCD_ukraine_right_ukr_wars
+			}
+		completion_reward = {
+			GEL = {
+				add_stability = -0.25
+			}
+			ANA = {
+				add_stability = -0.25
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 18
+		y = 8
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise
+			}
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 9
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2
+			}
+			mutually_exclusive = {
+				focus = DCD_ukraine_right_ukr_uprise2_republics
+			}
+		completion_reward = {
+				NVR = {
+					division_template = {
+						name = "Separatists"
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+						}
+						support = {
+						}
+					}
+					197 = { add_core_of = NVR }
+					192 = { add_core_of = NVR }
+					766 = { add_core_of = NVR }
+					203 = { add_core_of = NVR }
+					225 = { add_core_of = NVR }
+					193 = { add_core_of = NVR }
+					198 = { add_core_of = NVR }
+					834 = { add_core_of = NVR }
+					137 = { add_core_of = NVR }
+					227 = {
+						add_core_of = NVR
+						transfer_state_to = NVR
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+					}
+					228 = {
+						add_core_of = NVR
+						transfer_state_to = NVR
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+					}
+					196 = {
+						add_core_of = NVR
+						transfer_state_to = NVR
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+					}
+					200 = {
+						add_core_of = NVR
+						transfer_state_to = NVR
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+					}
+					226 = {
+						add_core_of = NVR
+						transfer_state_to = NVR
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+					}
+					221 = {
+						add_core_of = NVR
+						transfer_state_to = NVR
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+						create_unit = {
+							division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+							allow_spawning_on_enemy_provs = no
+							owner = NVR
+						}
+					}
+					add_opinion_modifier = { target = ROOT modifier = huge_increase }
+				}
+				add_opinion_modifier = { target = NVR modifier = huge_increase }
+				give_guarantee = NVR
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_factory1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 10
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya
+			}
+		completion_reward = {
+			227 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 6474 } }
+			227 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 6420 } }
+			228 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 9461 } }
+			NVR = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_factory2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 11
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya_factory1
+			}
+		completion_reward = {
+			200 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 11405 } }
+			196 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 721 } }
+			NVR = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_factory3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 17
+		y = 12
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya_factory2
+			}
+		completion_reward = {
+			221 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 418 } }
+			226 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 11561 } }
+			226 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 11437 } }
+			NVR = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 6
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_weapon1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 15
+		y = 10
+		available = {
+			has_equipment = {
+				infantry_equipment > 49999
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya
+			}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -50000
+			}
+			NVR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_weapon2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 15
+		y = 11
+		available = {
+			has_manpower > 100000
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya_weapon1
+			}
+		completion_reward = {
+			add_manpower = -100000
+			NVR = {
+				add_manpower = 100000
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_weapon3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 15
+		y = 12
+		available = {
+			has_equipment = {
+				infantry_equipment > 49999
+			}
+			has_manpower > 100000
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya_weapon2
+			}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -50000
+			}
+			add_manpower = -100000
+			NVR = {
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_sci
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 16
+		y = 16
+		available = {
+			NVR = {
+				exists = yes
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya_weapon3
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya_factory3
+				focus = DCD_uprise_novorossiya
+			}
+		completion_reward = {
+			add_research_slot = 3
+			NVR = {
+				add_research_slot = 3
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 10
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya
+			}
+		completion_reward = {
+			NVR = {
+				declare_war_on = {
+				type = annex_everything
+				target = GEL
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = ANA
+				}
+				add_ideas = DCD_dead
+			}
+			GEL = { add_ideas = DCD_dead }
+			ANA = { add_ideas = DCD_dead }
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_puppet
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 11
+		available = {
+			NVR = {
+				exists = yes
+				has_war = no
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya_war
+			}
+		completion_reward = {
+			puppet = NVR
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_puppet_special_operation
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 11
+		available = {
+			NVR = {
+				exists = yes
+				has_war = yes
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya_war
+			}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = ANA
+			}
+			declare_war_on = {
+				type = annex_everything
+				target = GEL
+			}
+			NVR = {
+				give_military_access = ROOT
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_novorossiya_puppet_integrate
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 12
+		available = {
+			NVR = {
+				exists = yes
+				has_war = no
+			}
+			has_war = no
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya_puppet
+			}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = NVR
+				}
+				add_core_of = ROOT
+			}
+			annex_country = {
+				target = NVR
+				transfer_troops = yes
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_uprise2_republics
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 9
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2
+			}
+			mutually_exclusive = {
+				focus = DCD_ukraine_right_ukr_uprise2_novorossiya
+			}
+		completion_reward = {
+			GEL = {
+				add_stability = -0.25
+			}
+			ANA = {
+				add_stability = -0.25
+			}
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_wars
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 5
+		available = {
+			ANA = {
+				has_opinion = {
+					target = GEL
+					value < 10
+				}
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr
+			}
+			mutually_exclusive = {
+				focus = DCD_ukraine_right_ukr_uprise
+			}
+		completion_reward = {
+			ANA = {
+				declare_war_on = {
+					type = annex_everything
+					target = GEL
+				}
+				add_ideas = DCD_dead
+			}
+			GEL = { add_ideas = DCD_dead }
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_ukr_wars_start
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 6
+		available = {
+			GEL = {
+				has_war = yes
+				exists = yes
+			}
+			ANA = {
+				has_war = yes
+				exists = yes
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_wars
+			}
+		completion_reward = {
+			declare_war_on = {
+				target = GEL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ANA
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = DCD_ukraine_right_war_integrate
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 7
+		available = {
+			ANA = {
+				exists = no
+			}
+			GEL = {
+				exists = no
+			}
+			has_war = no
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_war
+				focus = DCD_ukraine_right_ukr_wars
+			}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = DCD_uprise_odessa
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 19
+		y = 10
+		available = {
+			ODS = {
+				exists = no
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_republics
+			}
+		completion_reward = {
+			ODS = {
+				division_template = {
+					name = "Separatists"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+					}
+				}
+				192 = {
+					add_core_of = ODS
+					transfer_state_to = ODS
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+				}
+				766 = {
+					add_core_of = ODS
+					transfer_state_to = ODS
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = ODS
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = huge_increase }
+			}
+			add_opinion_modifier = { target = ODS modifier = huge_increase }
+			give_guarantee = ODS
+		}
+	}
+	focus = {
+		id = DCD_uprise_odessa_weapons
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 19
+		y = 11
+		available = {
+			has_equipment = {
+				infantry_equipment > 19999
+			}
+		}
+			prerequisite = {
+				focus = DCD_uprise_odessa
+			}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -20000
+			}
+			ODS = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+				}
+				add_timed_idea = { idea = DCD_mass_conscription days = 720 }
+				192 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 11670 } }
+				766 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 6727 } }
+			}
+		}
+	}
+	focus = {
+		id = DCD_uprise_kherson
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 21
+		y = 10
+		available = {
+			KHE = {
+				exists = no
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_republics
+			}
+		completion_reward = {
+			KHE = {
+				division_template = {
+					name = "Separatists"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+					}
+				}
+				196 = {
+					add_core_of = KHE
+					transfer_state_to = KHE
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = KHE
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = huge_increase }
+			}
+			add_opinion_modifier = { target = KHE modifier = huge_increase }
+			give_guarantee = KHE
+		}
+	}
+	focus = {
+		id = DCD_uprise_kherson_weapons
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 21
+		y = 11
+		available = {
+			has_equipment = {
+				infantry_equipment > 19999
+			}
+		}
+			prerequisite = {
+				focus = DCD_uprise_kherson
+			}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -20000
+			}
+			KHE = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+				}
+				add_timed_idea = { idea = DCD_mass_conscription days = 720 }
+				196 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 721 } }
+			}
+		}
+	}
+	focus = {
+		id = DCD_uprise_dnr
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 23
+		y = 10
+		available = {
+			DNR = {
+				exists = no
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_republics
+			}
+		completion_reward = {
+			DNR = {
+				division_template = {
+					name = "Separatists"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+					}
+				}
+				227 = {
+					add_core_of = DNR
+					transfer_state_to = DNR
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = DNR
+					}
+				}
+			add_opinion_modifier = { target = ROOT modifier = huge_increase }
+		}
+		add_opinion_modifier = { target = DNR modifier = huge_increase }
+			give_guarantee = DNR
+	}
+}
+	focus = {
+		id = DCD_uprise_dnr_weapons
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 23
+		y = 11
+		available = {
+			has_equipment = {
+				infantry_equipment > 19999
+			}
+		}
+			prerequisite = {
+				focus = DCD_uprise_dnr
+			}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -20000
+			}
+			DNR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+				}
+				add_timed_idea = { idea = DCD_mass_conscription days = 720 }
+				227 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 6474 } }
+				227 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 6420 } }
+			}
+		}
+	}
+	focus = {
+		id = DCD_uprise_lnr
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 25
+		y = 10
+		available = {
+			LNR = {
+				exists = no
+			}
+		}
+			prerequisite = {
+				focus = DCD_ukraine_right_ukr_uprise2_republics
+			}
+		completion_reward = {
+			LNR = {
+				division_template = {
+					name = "Separatists"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+					}
+				}
+				228 = {
+					add_core_of = LNR
+					transfer_state_to = LNR
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+					create_unit = {
+						division = "name = \"Separatists\" division_template = \"Separatists\" start_experience_factor = 0.1"
+						allow_spawning_on_enemy_provs = no
+						owner = LNR
+					}
+			}
+			add_opinion_modifier = { target = ROOT modifier = huge_increase }
+		}
+		add_opinion_modifier = { target = LNR modifier = huge_increase }
+		give_guarantee = LNR
+	}
+}
+	focus = {
+		id = DCD_uprise_lnr_weapons
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 25
+		y = 11
+		available = {
+			has_equipment = {
+				infantry_equipment > 19999
+			}
+		}
+			prerequisite = {
+				focus = DCD_uprise_lnr
+			}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -20000
+			}
+			LNR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+				}
+				add_timed_idea = { idea = DCD_mass_conscription days = 720 }
+				228 = { add_building_construction = { type = bunker level = 6 instant_build = yes province = 9461 } }
+			}
+		}
+	}
+	focus = {
+		id = DCD_uprise_odessa_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 18
+		y = 14
+			prerequisite = {
+				focus = DCD_uprise_republics_war
+			}
+		completion_reward = {
+			ODS = {
+				declare_war_on = { type = annex_everything target = ANA }
+				declare_war_on = { type = annex_everything target = GEL }
+				add_ideas = DCD_dead
+			}
+			GEL = { add_ideas = DCD_dead }
+			ANA = { add_ideas = DCD_dead }
+		}
+	}
+	focus = {
+		id = DCD_uprise_kherson_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 20
+		y = 14
+			prerequisite = {
+				focus = DCD_uprise_republics_war
+			}
+		completion_reward = {
+			KHE = {
+				declare_war_on = { type = annex_everything target = ANA }
+				declare_war_on = { type = annex_everything target = GEL }
+				add_ideas = DCD_dead
+			}
+			GEL = { add_ideas = DCD_dead }
+			ANA = { add_ideas = DCD_dead }
+		}
+	}
+	focus = {
+		id = DCD_uprise_dnr_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 22
+		y = 14
+			prerequisite = {
+				focus = DCD_uprise_republics_war
+			}
+		completion_reward = {
+			DNR = {
+				declare_war_on = { type = annex_everything target = ANA }
+				declare_war_on = { type = annex_everything target = GEL }
+				add_ideas = DCD_dead
+			}
+			GEL = { add_ideas = DCD_dead }
+			ANA = { add_ideas = DCD_dead }
+		}
+	}
+	focus = {
+		id = DCD_uprise_lnr_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 24
+		y = 14
+			prerequisite = {
+				focus = DCD_uprise_republics_war
+			}
+		completion_reward = {
+			LNR = {
+				declare_war_on = { type = annex_everything target = ANA }
+				declare_war_on = { type = annex_everything target = GEL }
+				add_ideas = DCD_dead
+			}
+			GEL = { add_ideas = DCD_dead }
+			ANA = { add_ideas = DCD_dead }
+		}
+	}
+	focus = {
+		id = DCD_uprise_republics_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 4
+		x = 21
+		y = 12
+		available = {
+			LNR = { exists = yes }
+			DNR = { exists = yes }
+			ODS = { exists = yes }
+			KHE = { exists = yes }
+		}
+		prerequisite = {
+			focus = DCD_uprise_odessa_weapons
+			focus = DCD_uprise_kherson_weapons
+			focus = DCD_uprise_dnr_weapons
+			focus = DCD_uprise_lnr_weapons
+		}
+		mutually_exclusive = {
+			focus = DCD_uprise_republics_war_tactic
+		}
+		completion_reward = {
+			add_political_power = 250
+			LNR = { add_war_support = 0.5 }
+			DNR = { add_war_support = 0.5 }
+			ODS = { add_war_support = 0.5 }
+			KHE = { add_war_support = 0.5 }
+			GEL = { add_timed_idea = { idea = DCD_mass_conscription days = 365 } }
+			ANA = { add_timed_idea = { idea = DCD_mass_conscription days = 365 } }
+		}
+	}
+	focus = {
+		id = DCD_uprise_republics_war_tactic
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 12
+		available = {
+			LNR = { exists = yes }
+			DNR = { exists = yes }
+			ODS = { exists = yes }
+			KHE = { exists = yes }
+		}
+		prerequisite = {
+			focus = DCD_uprise_odessa_weapons
+		}
+		prerequisite = {
+			focus = DCD_uprise_kherson_weapons
+		}
+		prerequisite = {
+			focus = DCD_uprise_dnr_weapons
+		}
+		prerequisite = {
+			focus = DCD_uprise_lnr_weapons
+		}
+		mutually_exclusive = {
+			focus = DCD_uprise_republics_war
+		}
+		completion_reward = {
+			LNR = { declare_war_on = { type = annex_everything target = ANA } declare_war_on = { type = annex_everything target = GEL } add_ideas = DCD_dead add_ideas = DCD_dead add_timed_idea = { idea = DCD_tactics days = 365 } add_war_support = 0.5 }
+			DNR = { declare_war_on = { type = annex_everything target = ANA } declare_war_on = { type = annex_everything target = GEL } add_ideas = DCD_dead add_ideas = DCD_dead add_timed_idea = { idea = DCD_tactics days = 365 } add_war_support = 0.5 }
+			ODS = { declare_war_on = { type = annex_everything target = ANA } declare_war_on = { type = annex_everything target = GEL } add_ideas = DCD_dead add_ideas = DCD_dead add_timed_idea = { idea = DCD_tactics days = 365 } add_war_support = 0.5 }
+			KHE = { declare_war_on = { type = annex_everything target = ANA } declare_war_on = { type = annex_everything target = GEL } add_ideas = DCD_dead add_ideas = DCD_dead add_timed_idea = { idea = DCD_tactics days = 365 } add_war_support = 0.5 }
+			GEL = { add_ideas = DCD_dead add_timed_idea = { idea = DCD_mass_conscription days = 365 } }
+			ANA = { add_ideas = DCD_dead add_timed_idea = { idea = DCD_mass_conscription days = 365 } }
+		}
+	}
+	focus = {
+		id = DCD_uprise_special_operation
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 25
+		y = 15
+			prerequisite = {
+				focus = DCD_uprise_odessa_war
+				focus = DCD_uprise_kherson_war
+				focus = DCD_uprise_dnr_war
+				focus = DCD_uprise_lnr_war
+				focus = DCD_uprise_republics_war_tactic
+			}
+		completion_reward = {
+			declare_war_on = { type = annex_everything target = ANA } declare_war_on = { type = annex_everything target = GEL } add_timed_idea = { idea = DCD_tactics days = 365 }
+		}
+	}
+	focus = {
+		id = DCD_uprise_puppets
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 15
+		available = {
+			LNR = {
+				exists = yes
+				has_war = no
+			}
+			DNR = {
+				exists = yes
+				has_war = no
+			}
+			KHE = {
+				exists = yes
+				has_war = no
+			}
+			ODS = {
+				exists = yes
+				has_war = no
+			}
+		}
+			prerequisite = {
+				focus = DCD_uprise_odessa_war
+			}
+			prerequisite = {
+				focus = DCD_uprise_kherson_war
+			}
+			prerequisite = {
+				focus = DCD_uprise_dnr_war
+			}
+			prerequisite = {
+				focus = DCD_uprise_lnr_war
+			}
+			mutually_exclusive = {
+				focus = DCD_uprise_novorossiya
+			}
+		completion_reward = {
+			puppet = LNR
+			puppet = DNR
+			puppet = KHE
+			puppet = ODS
+		}
+	}
+	focus = {
+		id = DCD_uprise_puppets_integrate
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 16
+			prerequisite = {
+				focus = DCD_uprise_puppets
+			}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = LNR
+					is_core_of = DNR
+					is_core_of = KHE
+					is_core_of = ODS
+				}
+				add_core_of = ROOT
+			}
+				annex_country = {
+					target = LNR
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = DNR
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = KHE
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = ODS
+					transfer_troops = yes
+				}
+		}
+	}
+	focus = {
+		id = DCD_uprise_novorossiya
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 15
+		prerequisite = {
+			focus = DCD_uprise_odessa_war
+		}
+		prerequisite = {
+			focus = DCD_uprise_kherson_war
+		}
+		prerequisite = {
+			focus = DCD_uprise_dnr_war
+		}
+		prerequisite = {
+			focus = DCD_uprise_lnr_war
+		}
+		mutually_exclusive = {
+			focus = DCD_uprise_puppets
+		}
+		completion_reward = {
+			NVR = {
+				annex_country = { target = KHE transfer_troops = yes }
+				annex_country = { target = LNR transfer_troops = yes }
+				annex_country = { target = DNR transfer_troops = yes }
+				annex_country = { target = ODS transfer_troops = yes }
+				add_state_core = 228
+				add_state_core = 227
+				add_state_core = 221
+				add_state_core = 226
+				add_state_core = 200
+				add_state_core = 196
+				add_state_core = 259
+				add_state_core = 225
+				add_state_core = 193
+				add_state_core = 203
+				add_state_core = 197
+				add_state_core = 192
+				add_state_core = 766
+				add_state_core = 198
+				add_state_core = 137
+				declare_war_on = { type = annex_everything target = ANA }
+				declare_war_on = { type = annex_everything target = GEL }
+				add_ideas = DCD_dead
+				add_timed_idea = { idea = DCD_tactics days = 365 }
+				add_timed_idea = { idea = DCD_mass_conscription days = 720 }
+				add_war_support = 0.5
+			}
+			give_guarantee = NVR
+		}
+	}
+	focus = {
+		id = DCD_f_fascism
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 22
+		y = 2
+			prerequisite = {
+				focus = DCD_start_construction_projects
+			}
+			mutually_exclusive = {
+				focus = DCD_f_communism
+			}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_fascism2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 22
+		y = 3
+			prerequisite = {
+				focus = DCD_f_fascism
+			}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_economy1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 31
+		y = 2
+			prerequisite = {
+				focus = DCD_start_construction_projects
+			}
+		completion_reward = {
+			add_ideas = DCD_economy_buff
+		}
+	}
+	focus = {
+		id = DCD_f_economy2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 30
+		y = 3
+			prerequisite = {
+				focus = DCD_f_economy1
+			}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_economy3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 30
+		y = 4
+			prerequisite = {
+				focus = DCD_f_economy2
+			}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_economy4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 30
+		y = 5
+			prerequisite = {
+				focus = DCD_f_economy3
+			}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_economy_a1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 32
+		y = 3
+			prerequisite = {
+				focus = DCD_f_economy1
+			}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_economy_a2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 32
+		y = 4
+			prerequisite = {
+				focus = DCD_f_economy_a1
+			}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_economy_a3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 32
+		y = 5
+			prerequisite = {
+				focus = DCD_f_economy_a2
+			}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_economy_sci
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 31
+		y = 6
+		available = {
+			num_of_factories > 50
+		}
+			prerequisite = {
+				focus = DCD_f_economy_a3
+			}
+			prerequisite = {
+				focus = DCD_f_economy4
+			}
+		completion_reward = {
+			add_research_slot = 2
+		}
+	}
+	focus = {
+		id = DCD_f_bananas
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 28
+		y = 2
+			prerequisite = {
+				focus = DCD_start_construction_projects
+			}
+		completion_reward = {
+			add_ideas = DCD_bananas
+		}
+	}
+	focus = {
+		id = DCD_f_tourists
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 28
+		y = 3
+			prerequisite = {
+				focus = DCD_f_bananas
+			}
+		completion_reward = {
+			every_core_state = {
+				add_manpower = 250000
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_tourists_taxes
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 28
+		y = 4
+			prerequisite = {
+				focus = DCD_f_tourists
+			}
+		completion_reward = {
+			add_ideas = DCD_tax_tourists
+		}
+	}
+	focus = {
+		id = DCD_f_towns_max
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 27
+		y = 5
+			prerequisite = {
+				focus = DCD_f_tourists_taxes
+			}
+			prerequisite = {
+				focus = DCD_f_resources3
+			}
+		completion_reward = {
+			234 = {
+				add_extra_state_shared_building_slots = 5
+				set_state_category = megalopolis
+			}
+			238 = {
+				add_extra_state_shared_building_slots = 5
+				set_state_category = megalopolis
+			}
+			137 = {
+				add_extra_state_shared_building_slots = 5
+				set_state_category = megalopolis
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_resources1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 26
+		y = 2
+			prerequisite = {
+				focus = DCD_start_construction_projects
+			}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 137
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_resources2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 26
+		y = 3
+			prerequisite = {
+				focus = DCD_f_resources1
+			}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 234
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_resources3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 26
+		y = 4
+			prerequisite = {
+				focus = DCD_f_resources2
+			}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 238
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_communism
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 24
+		y = 2
+			prerequisite = {
+				focus = DCD_start_construction_projects
+			}
+			mutually_exclusive = {
+				focus = DCD_f_fascism
+			}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_communism2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 24
+		y = 3
+			prerequisite = {
+				focus = DCD_f_communism
+			}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+			set_politics = {
+				ruling_party = communism
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_cuban
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 4
+			prerequisite = {
+				focus = DCD_f_communism2
+				focus = DCD_f_fascism2
+			}
+		completion_reward = {
+			add_state_core = 235
+			add_state_core = 233
+			add_state_core = 827
+			add_state_core = 821
+			add_state_core = 232
+			add_state_core = 237
+			add_state_core = 236
+			add_state_core = 217
+			add_state_core = 245
+			add_state_core = 218
+			create_wargoal = {
+				target = DCK
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = DVL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CWR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CIN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = AKT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = YNO
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = DKK
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = DCD_f_caucasus
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 5
+			prerequisite = {
+				focus = DCD_f_cuban
+			}
+		completion_reward = {
+			add_state_core = 826
+			add_state_core = 231
+			add_state_core = 828
+			add_state_core = 230
+			add_state_core = 229
+			create_wargoal = {
+				target = CLS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = AMI
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = DCD_start_military
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 2
+			prerequisite = {
+				focus = DCD_start_construction_projects
+			}
+		completion_reward = {
+			add_ideas = {
+				DCD_military_idea
+			}
+		}
+	}
+	focus = {
+		id = DCD_volunteers
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 9
+		y = 2
+			prerequisite = {
+				focus = DCD_start_construction_projects
+			}
+		completion_reward = {
+			set_rule = {
+				can_send_volunteers = yes
+				can_puppet = yes
+				can_declare_war_on_same_ideology = yes
+				can_force_government = yes
+				can_boost_other_ideologies = yes
+			}
+			add_ideas = DCD_volunteers_idea
+		}
+	}
+	focus = {
+		id = DCD_start_military_right
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 3
+			prerequisite = {
+				focus = DCD_start_military
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 3.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DCD_start_military_right2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 4
+			prerequisite = {
+				focus = DCD_start_military_right
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 3.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DCD_start_military_right3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 13
+		y = 5
+			prerequisite = {
+				focus = DCD_start_military_right2
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = air_equipment
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 3.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_ideas = {
+				DCD_military_modern_idea
+			}
+		}
+	}
+	focus = {
+		id = DCD_start_military_complete
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 12
+		y = 6
+			prerequisite = {
+				focus = DCD_start_military_right3
+			}
+			prerequisite = {
+				focus = DCD_start_military4
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = cat_heavy_armor
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 3.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DCD_start_military2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 3
+			prerequisite = {
+				focus = DCD_start_military
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = DCD_start_military3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 4
+			prerequisite = {
+				focus = DCD_start_military2
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 3
+				uses = 1
+				category = infantry_weapons
+		}
+		}
+	}
+	focus = {
+		id = DCD_start_military4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 11
+		y = 5
+			prerequisite = {
+				focus = DCD_start_military3
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 3
+				uses = 1
+				category = armor
+		}
+		}
+	}
+}

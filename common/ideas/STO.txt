@@ -1,0 +1,90 @@
+ideas = {
+	country = {
+		STO_debuff_PSI_attack = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			targeted_modifier = {
+				tag = PSI
+				attack_bonus_against = -0.15
+				
+			}
+			modifier = {
+				army_org_factor = -0.15
+				army_morale_factor = -0.15
+			}
+		}
+		STO_buff_PSI_attack = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			targeted_modifier = {
+				tag = PSI
+				attack_bonus_against = 0.05
+			}
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		STO_resouces_f = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		STO_attack_f_gen = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				army_defence_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		STO_attack_f_gen2 = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		STO_attack_f_gen3 = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
+		STO_reich = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_attack_factor = 0.07
+			}
+		}
+		STO_export = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				trade_opinion_factor = 1
+				min_export = 0.5
+			}
+		}
+		STO_prod1 = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		STO_prod2 = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+	}
+}

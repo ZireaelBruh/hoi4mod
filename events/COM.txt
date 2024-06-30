@@ -1,0 +1,284 @@
+﻿# Оборонный пакт
+add_namespace = COM
+add_namespace = COM_integrate_deal
+country_event = {
+	id = com.1
+	title = com.1.t
+	desc = com.1.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_war_with = FROM }
+	}
+	
+	option = {
+		name = com.1.a
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = COM value > 50 }
+				factor = 50
+			}
+			factor = 1
+			modifier = {
+				tag = KIL
+				factor = 25
+			}
+			modifier = {
+				tag = PSI
+				factor = 75
+			}
+			modifier = {
+				tag = GEL
+				factor = 15
+			}
+			modifier = {
+				tag = KTA
+				factor = 50
+			}
+		}
+		FROM = { country_event = { id = com.2 days = 1 } }
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = com.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				tag = KIL
+				factor = 75
+			}
+			modifier = {
+				tag = PSI
+				factor = 25
+			}
+			modifier = {
+				tag = GEL
+				factor = 85
+			}
+			modifier = {
+				tag = KTA
+				factor = 50
+			}
+		}
+		FROM = { country_event = { id = com.3 days = 1 }
+		}
+		effect_tooltip = {
+		}
+	}
+}
+
+# Оборонный пакт принял
+country_event = {
+	id = com.2
+	title = com.2.t
+	desc = com.2.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = com.2.a
+		ROOT = {
+		add_to_faction = FROM
+		}
+		add_war_support = 0.05 #dodged a bullet there
+	}
+}
+
+# Оборонный пакт отказ
+country_event = {
+	id = com.3
+	title = com.3.t
+	desc = com.3.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = com.3.a
+	}
+}
+#######################################
+
+country_event = {
+	id = COM_integrate_deal.1
+	title = COM_integrate_deal.1.t
+	desc = COM_integrate_deal.1.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_war_with = FROM }
+	}
+	
+	option = {
+		name = COM_integrate_deal.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_opinion = { target = COM value > 50 }
+				factor = 50
+			}
+			modifier = {
+				tag = KIL
+				factor = 20
+			}
+			modifier = {
+				tag = GUS
+				factor = 2
+			}
+			modifier = {
+				tag = BAR
+				factor = 30
+			}
+			modifier = {
+				tag = VEX
+				factor = 35
+			}
+			modifier = {
+				tag = YNO
+				factor = 3
+			}
+			modifier = {
+				tag = RMX
+				factor = 5
+			}
+			modifier = {
+				tag = TBL
+				factor = 5
+			}
+			modifier = {
+				tag = DKK
+				factor = 10
+			}
+			modifier = {
+				tag = DVL
+				factor = 10
+			}
+			modifier = {
+				tag = DCD
+				factor = 30
+			}
+		}
+		FROM = { country_event = { id = COM_integrate_deal.2 days = 1 } }
+		effect_tooltip = {
+			FROM = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = ROOT
+					}
+				}
+				add_core_of = FROM
+			}
+		}
+	}
+	
+	option = {
+		name = COM_integrate_deal.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				tag = KIL
+				factor = 80
+			}
+			modifier = {
+				tag = GUS
+				factor = 92
+			}
+			modifier = {
+				tag = BAR
+				factor = 70
+			}
+			modifier = {
+				tag = VEX
+				factor = 65
+			}
+			modifier = {
+				tag = YNO
+				factor = 97
+			}
+			modifier = {
+				tag = RMX
+				factor = 95
+			}
+			modifier = {
+				tag = TBL
+				factor = 95
+			}
+			modifier = {
+				tag = DKK
+				factor = 90
+			}
+			modifier = {
+				tag = DVL
+				factor = 90
+			}
+			modifier = {
+				tag = DCD
+				factor = 70
+			}
+		}
+		FROM = { country_event = { id = COM_integrate_deal.3 days = 1 }
+		}
+		effect_tooltip = {
+		}
+	}
+}
+
+# Оборонный пакт принял 2
+country_event = {
+	id = COM_integrate_deal.2
+	title = COM_integrate_deal.2.t
+	desc = COM_integrate_deal.2.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = COM_integrate_deal.2.a
+
+		ROOT = {
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
+		}
+		every_state = {
+				limit = {
+					OR = {
+						is_core_of = FROM
+					}
+				}
+				add_core_of = ROOT
+			}
+		add_war_support = 0.05 #dodged a bullet there
+	}
+}
+
+# Оборонный пакт отказ 2
+country_event = {
+	id = COM_integrate_deal.3
+	title = COM_integrate_deal.3.t
+	desc = COM_integrate_deal.3.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = COM_integrate_deal.3.a
+	}
+}

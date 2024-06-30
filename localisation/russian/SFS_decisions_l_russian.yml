@@ -1,0 +1,102 @@
+﻿l_russian:
+
+ #Vanilla Fix
+ form_country_oman_required_states_tt:0 "Контролирует все §YОманские§! регионы."
+ form_country_oman_coring_states_tt:0 "Усиление контроля во всех §YОманские§! регионах.\n"
+ form_country_yemen_required_states_tt:0 "Контролирует все §YЙеменские§! регионы."
+ form_country_yemen_coring_states_tt:0 "Усиление контроля во всех §YЙеменские§! регионах.\n"
+ 
+ GER_reichskommissariat_moskowien:0 "Рейхскомиссариат Московия"
+ GER_reichskommissariat_kaukasus:0 "Рейхскомиссариат Кавказа"
+ GER_reichsprotektorat_bohmen_und_mahren:0 "Рейхспротекторат Богемия-Моравия"
+ GER_generalgouvernement:0 "Генерал-Губернаторство"
+
+ #Reichsprotektorat
+ GER_form_the_reichsprotektorat:0 "Сформировать Рейхспротекторат"
+ GER_form_the_reichsprotektorat_desc:0 "Чтобы улучшить использование местных ресурсов, промышленности и рабочей силы, мы должны рассмотреть возможность создания квазиавтономного правительства в наших завоеванных территориях."
+ GER_reichsprotektorat:0 "Рейхспротекторат"
+ GER_reichsprotektorat_desc:0 "Позволяет формировать определенные субъекты рейхспроектората за пределами подконтрольной территории."
+ 
+ #Burgenland Question
+ HUN_burgenland_question:0 "Запросить Бургенланд из Германии"
+ HUN_burgenland_question_desc:0 "Бургенланд – наша законная территория. Мы были вынуждены потерять этот регион в 1921 году в результате сомнительных всеобщих выборов. Но теперь, когда Германия контролирует этот регион возможно, нам их удастся убедить отдать его нам..."
+ 
+ #Separate Burma
+ SFS_colony_politic_category:0 "Сепаратная Бирма"
+ SFS_colony_politic_category_desc:0 "Мы можем принять новую конституцию, предусматривающую полностью избранное собрание, наделенное многими полномочиями бирманцев."
+ ENG_separate_burma:0 "Отделить Бирму от Индии"
+ 
+ #New order in France
+ GER_new_order_in_france_category:0 "Новый порядок во Франции"
+ GER_new_order_in_france_category_desc:0 "Мы завоевали всю Францию! Поскольку они представляли для нас огромную угрозу, возможно, балканизация Франции будет полезна для контроля над ними."
+ GER_ss_staat_burgund:0 "Сформируйте Орденсштаат Бургундия"
+ GER_ss_staat_burgund_desc:0 "Генрих Гиммлер, лидер шуцштаффеля, предложил сформировать СОрденсштаат Бургундия.Генрих Гиммлер сказал: "Бургундия - древний экономический и культурный центр, и ее было бы легче контролировать отдельно от Франции"."
+ GER_unabhangiger_staat_bretagne:0 "Сформируйте Протекторат Бретань"
+ GER_unabhangiger_staat_bretagne_desc:0 "Наш фюрер Адольф Гитлер предложил создать независимое государство Бретань.Он неоднократно упоминал об этом намерении в своем генеральном штабе."
+ 
+ #New name of cities
+ SFS_new_name_of_cities_category:0 "Новые названия для наших Городов"
+ SFS_new_name_of_cities_category_desc:0 "Некоторые города, которые мы оккупировали, имеют политически значимые названия, данные их предыдущими управляющими. Теперь, когда эти города в наших руках, мы можем дать им новые, менее спорные названия."
+ SFS_new_name_of_leningrad:0 "Новое имя для [195.GetName]"
+ SFS_new_name_of_stalingrad:0 "Новое имя для [217.GetName]"
+ 
+ #North German Confederation
+ form_north_german_confederation_category:0 "Возродить Северогерманскую конфедерацию"
+ form_north_german_confederation_category_desc:0 "Воссоедините Северную Германию и возродите Северогерманскую конфедерацию."
+ form_north_german_confederation:0 "Возродить Северогерманскую конфедерацию"
+ 
+ #Invade Monaco
+ SFS_invade_monaco_category:0 "Вторгнуться в Монако"
+ SFS_invade_monaco_category_desc:0 "Бедное Монако окружено нашими войсками. Некоторые люди начали говорить, что у них есть потенциал стать базой для наших врагов. Они очень слабы, поэтому мы можем легко победить их и свести на нет угрозу."
+ SFS_invade_monaco:0 "Вторгнуться в Монако"
+ 
+ #Form Confederate States
+ form_confederate_states_category:0 "Слава Конфедеративным Штатам"
+ form_confederate_states_category_desc:0 "Наша славная страна Конфедеративные Штаты Америки возродится, и мы больше не проиграем"
+ form_confederate_states:0 "Слава Конфедеративным Штатам"
+
+ #Jewish State 
+ BS_jews_country_category:0 "Вопрос о Еврейском Государстве"
+ BS_jews_country_category_desc:0 "Последние тысячи лет многие страны и историки пытались создать еврейское государство. Это будет полезно для развития неразвитого региона. Местные жители могут быть против создания еврейского государства на своих землях. Однако после этого они будут показывать пальцем друг на друга, а не на нас. какое место подходит?"
+ BS_jews_alaska:0 "Аляска"
+ BS_jews_guiana:0 "Гвиана"
+ BS_jews_madagascar:0 "Мадагаскар" #Germany only
+ BS_jews_palestine:0 "Палестина"
+ BS_jews_uganda:0 "Уганда"
+
+ #Mittelafrika
+ GER_mittelafrika_plan_category:0 "Миттелафрика"
+ GER_mittelafrika_plan_category_desc:0 "До Великой войны мы представляли себе огромную африканскую колонию, простиравшуюся от Камеруна до Танганьики. Хотя нам пришлось отступить, потому что мы проиграли, хотя теперь мы контролируем большую часть Африки. Пришло время осуществить нашу мечту."
+ GER_form_the_mittelafrika:0 "Сформируйте Миттелафрика"
+ 
+ #German Empire Nano states; Nordschleswig, Eupen-Malmedy, Hlucin
+ BS_german_empire_territory_cateogry:0 "Реинтегрировать Старое Наследие"
+ BS_integrate_eupen:0 "Реинтегрировать Эйпен-Мальмеди"
+ BS_integrate_schleswig:0 "Реинтегрировать Северный Шлезвиг"
+ BS_integrate_hlucin:0 "Реинтегрировать Хультшин"
+ 
+ #Golden Gate Bridge
+ USA_golden_gate_bridge_category:0 "Мост Золотые ворота"
+ USA_golden_gate_bridge_category_desc:0 "Мост Золотые ворота - это подвесной мост, перекинутый через Золотые ворота, пролив шириной в милю, соединяющий залив Сан-Франциско и Тихий океан. Сооружение связывает американский город Сан-Франциско, штат Калифорния, - северную оконечность полуострова Сан-Франциско - с округом Марин, по которому проходят как шоссе 101 США, так и шоссе 1 штата Калифорния через пролив."
+ USA_golden_gate_bridge:0 "Строительство моста"
+ golden_gate_bridge_tt:0 "§GВы сможете пересечь пролив Золотые ворота.§!"
+
+#Reclaim Balhae
+ reclaim_balhae_states_category:0 "Восстановить Балхаэ"
+ reclaim_balhae_states_category_desc:0 "Пришло время восстановить великую империю, И мы будем править Восточной Азией."
+ sfs_reclaim_balhae:0 "Восстановить Балхаэ"
+
+#Brest-Litovsk
+ GER_treaty_of_brest_litovsk_category:0 "Восстановить Брест-Литовский мирный договор"
+ GER_treaty_of_brest_litovsk_category_desc:0 "Брест-Литовский договор должен быть восстановлен в первую очередь среди всех иностранных договоров, которые мы подписали. Россиянам следует напомнить, что они не могут быть равны против нас."
+ GER_establish_white_ruthenia:0 "Образовать Белую Русь"
+ GER_establish_duchy_of_baltic:0 "Образовать Балтийское герцогство"
+ GER_establish_kingdom_of_lithuania:0 "Образовать Литовского королевства"
+ GER_establish_kingdom_of_ukraine:0 "Образовать Королевство Украина"
+ 
+ #Unite the Mongolia
+ SFS_unite_the_mongolia_category:0 "Объединить Монголию"
+ MON_unite_the_mongolia:0 "Интеграция Менгкукуо"
+ MEN_unite_the_mongolia:0 "Интеграция Внешней Монголии"
+ SFS_unite_the_inner_mongolia:0 "Интеграция Внутренней Монголии"
+ SFS_integrate_Tuva:0 "Интегрировать Туву" 

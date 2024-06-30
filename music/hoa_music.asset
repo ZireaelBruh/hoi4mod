@@ -1,0 +1,65 @@
+music = {
+	name = "GHOSTFACE PLAYA - I DONT GIVE A FUCK (FEAT. PHARMACIST)"
+	file = "GHOSTFACE PLAYA - I DONT GIVE A FUCK (FEAT. PHARMACIST).ogg"
+	volume = 1.25
+}
+music = {
+	name = "GRAVECHILL - TWILIGHT"
+	file = "GRAVECHILL - TWILIGHT.ogg"
+	volume = 1.25
+}
+music = {
+	name = "ikitata - Дресскод x Shadowraze - Astral Step"
+	file = "ikitata - Дресскод x Shadowraze - Astral Step.ogg"
+	volume = 1.25
+}
+music = {
+	name = "KORDHELL - LIVE ANOTHER DAY"
+	file = "KORDHELL - LIVE ANOTHER DAY.ogg"
+	volume = 1.25
+}
+music = {
+	name = "KORDHELL - Murder In My Mind"
+	file = "KORDHELL - Murder In My Mind.ogg"
+	volume = 1.25
+}
+music = {
+	name = "MUPP - Tokyo Revengers"
+	file = "MUPP - Tokyo Revengers.ogg"
+	volume = 1.25
+}
+music = {
+	name = "never-met"
+	file = "never-met.ogg"
+	volume = 1.25
+}
+music = {
+	name = "PRXSXNT FXTURE - SMOKED OUT"
+	file = "PRXSXNT FXTURE - SMOKED OUT.ogg"
+	volume = 1.25
+}
+music = {
+	name = "SHADXWBXRN - ADRENALIN"
+	file = "SHADXWBXRN - ADRENALIN.ogg"
+	volume = 1.25
+}
+music = {
+	name = "SHADXWBXRN - KNIGHT"
+	file = "SHADXWBXRN - KNIGHT.ogg"
+	volume = 1.25
+}
+music = {
+	name = "SHADXWBXRN, ARCHEZ, KXNVRA - PRINCE OF DARKNESS"
+	file = "SHADXWBXRN, ARCHEZ, KXNVRA - PRINCE OF DARKNESS.ogg"
+	volume = 1.25
+}
+music = {
+	name = "Wenn Die Soldaten"
+	file = "Wenn Die Soldaten.ogg"
+	volume = 1.25
+}
+music = {
+	name = "подлая еврейская музыка"
+	file = "подлая еврейская музыка.ogg"
+	volume = 1.25
+}

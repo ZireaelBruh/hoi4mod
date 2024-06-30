@@ -1,0 +1,126 @@
+ideas = {
+	# MILITARY
+	country = {
+		hld_democratic_weapons_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.5
+				production_factory_max_efficiency_factor = 0.5
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		hld_democratic_war_factories_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		hld_democratic_navy_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+		hld_democratic_factory_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		hld_democratic_faction_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				guarantee_cost = -0.25
+				lend_lease_tension = -1.0
+				opinion_gain_monthly_same_ideology_factor = 0.25
+				exile_manpower_factor = 0.25
+				ai_focus_aggressive_factor = 0.25
+				ai_focus_naval_air_factor = 0.25
+				ai_focus_naval_factor = 0.5
+				army_speed_factor = 0.15
+			}
+		}
+		hld_authority_find_leader_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				stability_weekly_factor = 0.05
+			}
+		}
+		hld_authority_great_war_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				command_power_gain_mult = 0.25
+				minimum_training_level = -0.25
+			}
+		}
+		hld_authority_empire_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				stability_weekly_factor = 0.05
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+		}
+		hld_authority_great_empire_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				stability_weekly_factor = 0.05
+			}
+		}
+		hld_communization_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		hld_communist_army_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				minimum_training_level = -0.5
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		hld_communist_army_mech_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.1
+				motorized_attack_factor = 0.05
+				army_armor_attack_factor = 0.05
+			}
+		}
+		hld_communist_war_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.1
+				breakthrough_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		hld_communist_faction_idea = {
+			picture = political_violence
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.5
+				acclimatization_hot_climate_gain_factor = 0.5
+			}
+		}
+}
+}

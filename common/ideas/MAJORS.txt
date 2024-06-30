@@ -1,0 +1,36 @@
+ideas = {
+	# MILITARY
+	country = {
+		major_debuff = {
+			picture = generic_exploit_mines
+			
+			removal_cost = -1
+			
+				modifier = {
+				stability_weekly_factor = 0.05
+				political_power_cost = 0.25
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+
+		minor_buff = {
+			picture = generic_economic_increase
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = -0.25
+			}
+		}
+		GEN_have_constitution = {
+			picture = generic_exploit_mines
+			
+			removal_cost = -1
+			
+				modifier = {
+				stability_weekly_factor = 0.05
+				political_power_cost = 0.5
+			}
+		}
+	}
+}

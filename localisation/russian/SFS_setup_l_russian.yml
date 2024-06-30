@@ -1,0 +1,8 @@
+﻿l_russian:
+
+ RULE_SFS_GAMEPLAY:0 "Satisfying States"
+ RULE_ALLOW_SFS_EXTRA:0 "Дополнительные материалы"
+ RULE_OPTION_ALLOWED:0 "Вкл"
+ RULE_ALLOW_SFS_EXTRA_ALLOWED_DESC:0 "Включить дополнительные материалы SFS; решения, события и сценарии."
+ RULE_OPTION_BLOCKED:0 "Выкл"
+ RULE_ALLOW_SFS_EXTRA_BLOCKED_DESC:0 "Большинство дополнительных функций SFS будут отключены; решения, события и сценарии."

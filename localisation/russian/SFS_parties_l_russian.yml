@@ -1,0 +1,173 @@
+﻿l_russian:
+
+ ##Vanilla Countries
+ BRM_neutrality_party:0 "Вечеринка для бедняков"
+
+ BEL_neutrality_party:0 "Национальное роялистское движение"
+ BEL_neutrality_party_long:0 "Национальное роялистское движение"
+
+ GER_communism_party_long:0 "Коммунистическая партия Германии"
+ GER_cdu_csu_party:0 "ХДС/ХСС"
+ GER_cdu_csu_party_long:0 "Христианско-демократический союз Германии/Христианско-социальный союз в Баварии"
+ GER_spd_party:0 "СДПГ"
+ GER_spd_party_long:0 "Социал-демократическая партия Германии"
+ 
+ WGR_neutrality_party:0 "СЭВ"
+ WGR_neutrality_party_long:0 "Союз экономического восстановления"
+ WGR_communism_party:0 "КПГ"
+ WGR_communism_party_long:0 "Коммунистическая партия Германии"
+ WGR_democratic_party:0 "ХДС/ХСС"
+ WGR_democratic_party_long:0 "Христианско-демократический союз Германии/Христианско-социальный союз в Баварии"
+ WGR_fascism_party:0 "НДПГ"
+ WGR_fascism_party_long:0 "Национал-демократическая партия Германии"
+ 
+ DDR_communism_party:0 "СЕПГ"
+ DDR_communism_party_long:0 "Социалистическая единая партия Германии"
+ DDR_democratic_party:0 "ХДС"
+ DDR_democratic_party_long:0 "Христианско-демократический союз Германии"
+ 
+ CRO_fascism_party:0 "Усташ"
+ CRO_fascism_party_long:0 "Хорватское революционное движение"
+ CRO_democratic_party:0 "Хорватский блок" #Croatian Bloc
+ CRO_democraticm_party_long:0 "Хорватский блок"
+ CRO_neutrality_party:0 "ХКС"    #Croatian Peasant Party
+ CRO_neutrality_party_long:0 "Хорватская крестьянская партия"
+ 
+ MEN_fascism_party:0 "МВП"
+ MEN_fascism_party_long:0 "Монгольское военное правительство"
+ 
+ SLV_democratic_party:0 "СНП"
+ SLV_democratic_party_long:0 "Словенская народная партия" #Slovene People's Party
+ SLV_neutrality_party:0 "СКП"
+ SLV_neutrality_party_long:0 "Словенская крестьянская партия" #Slovene Peasant Party
+ 
+ PAR_democratic_party:0 "Партия Либералов"
+ PAR_democratic_party_long:0 "Партия Либералов"
+ PAR_neutrality_party:0 "Военное Правительство"
+ PAR_neutrality_party_long:0 "Вооруженные силы Парагвая" #Armed Forces of Paraguay
+
+
+ ##German Countries
+ BAY_neutrality_party:0 "БКЛ"
+ BAY_neutrality_party_long:0 "Баварская крестьянская лига"
+ BAY_communism_party:0 "НСДП"
+ BAY_communism_party_long:0 "Независимая социал-демократическая партия"
+ BAY_democratic_party:0 "БНП"
+ BAY_democratic_party_long:0 "Баварская народная партия"
+ BAY_fascism_party:0 "БНП"
+ BAY_fascism_party_long:0 "Баварская националистическая партия"
+
+ PRE_fascism_party:0 "НСДАП"
+ PRE_fascism_party_long:0 "Национал-социалистическая немецкая рабочая партия"
+ PRE_democratic_party:0 "СДПГ"
+ PRE_democratic_party_long:0 "Социал-демократическая партия Германии"
+ PRE_communism_party:0 "КПГ"
+ PRE_communism_party_long:0 "Коммунистическая партия Германии"
+ PRE_neutrality_party:0 "DNVP"
+ PRE_neutrality_party_long:0 "Немецкая национальная народная партия"
+ 
+ BDN_fascism_party:0 "НСДАП"
+ BDN_fascism_party_long:0 "Национал-социалистическая немецкая рабочая партия"
+ BDN_democratic_party:0 "СДПГ"
+ BDN_democratic_party_long:0 "Социал-демократическая партия Германии"
+ BDN_communism_party:0 "КПГ"
+ BDN_communism_party_long:0 "Коммунистическая партия Германии"
+ 
+ MEK_fascism_party:0 "НСДАП"
+ MEK_fascism_party_long:0 "Национал-социалистическая немецкая рабочая партия"
+ MEK_democratic_party:0 "СДПГ"
+ MEK_democratic_party_long:0 "Социал-демократическая партия Германии"
+ MEK_communism_party:0 "КПГ"
+ MEK_communism_party_long:0 "Коммунистическая партия Германии"
+ 
+ SAX_fascism_party:0 "НСДАП"
+ SAX_fascism_party_long:0 "Национал-социалистическая немецкая рабочая партия"
+ SAX_democratic_party:0 "СДПГ"
+ SAX_democratic_party_long:0 "Социал-демократическая партия Германии"
+ SAX_communism_party:0 "КПГ"
+ SAX_communism_party_long:0 "Коммунистическая партия Германии"
+ 
+ ##German puppet
+ RKO_fascism_party:0 "Рейхскомиссар"
+ RKU_fascism_party:0 "Рейхскомиссар"
+ RKK_fascism_party:0 "Рейхскомиссар"
+ RKM_fascism_party:0 "Рейхскомиссар"
+ NID_fascism_party:0 "Рейхскомиссар"
+ NWG_fascism_party:0 "Рейхскомиссар"
+ BNF_fascism_party:0 "Рейхскомиссар"
+ GGO_fascism_party:0 "Генерал-Губернаторство"
+ PBM_fascism_party:0 "Национальное Сообщество"
+ BGN_fascism_party:0 "Шуцштаффель"
+ MTA_fascism_party:0 "Рейхскомиссар"
+ MTA_neutrality_party:0 "Губернатор колонии"
+
+ ##Belgian Countries
+ FLA_fascism_party:0 "ВНВ"
+ FLA_fascism_party_long:0 "Влаамс Национальный Вербонд"
+ FLA_communism_party:0 "КПБ"
+ FLA_communism_party_long:0 "Коммунистическая партия Бельгии"
+ FLA_democratic_party:0 "Католический блок"
+ FLA_democratic_party_long:0 "Католический блок"
+ FLA_neutrality_party:0 "Национальное роялистское движение"
+ FLA_neutrality_party_long:0 "Национальное роялистское движение"
+
+ WLL_fascism_party:0 "РЕХ"
+ WLL_fascism_party_long:0 "Партия Рексистов"
+ WLL_communism_party:0 "КПБ"
+ WLL_communism_party_long:0 "Коммунистическая партия Бельгии"
+ WLL_democratic_party:0 "Валлонское движение"
+ WLL_democratic_party_long:0 "Валлонское движение"
+ WLL_neutrality_party:0 "Национальное роялистское движение"
+ WLL_neutrality_party_long:0 "Национальное роялистское движение"
+ 
+
+ ##etc
+ LIE_neutrality_party:0 "ПГПЛ"
+ LIE_neutrality_party_long:0 "Прогрессивная гражданская партия в Лихтенштейне"
+ LIE_democratic_party:0 "Отечественный союз"
+ LIE_fascism_party:0 "ГНДЛ"
+ LIE_fascism_party_long:0 "Германское национальное движение Лихтенштейна"
+ 
+ KTS_neutrality_party:0 "Дом Бурбонов - Две Сицилии"
+ KTS_communism_party:0 "СНКП"
+ KTS_communism_party_long:0 "Сицилийская народная коммунистическая партия"
+ KTS_democratic_party:0 "СЛП"
+ KTS_democratic_party_long:0 "Сицилийская либеральная партия"
+ KTS_fascism_party:0 "СНП"
+ KTS_fascism_party_long:0 "Сицилийская националистическая партия"
+ 
+ VCT_neutrality_party:0 "Римская курия"
+
+ SMR_democratic_party:0 "Генеральный совет Сан-Марино"
+ SMR_fascism_party:0 "СФП"
+ SMR_fascism_party_long:0 "Саммаринская фашистская партия"
+ SMR_communism_party:0 "СКП"
+ SMR_communism_party_long:0 "Саммаринская коммунистическая партия"
+
+ ADR_democratic_party:0 "Генеральный совет долин Андорры"
+ MCO_neutrality_party:0 "Дом Гримальди"
+ 
+ DAN_fascism_party:0 "НСДАП"
+ DAN_fascism_party_long:0 "Национал-социалистическая немецкая рабочая партия"
+ DAN_communism_party:0 "КПД"
+ DAN_communism_party_long:0 "Коммунистическая партия Данцига"
+ DAN_democratic_party:0 "СДПГ"
+ DAN_democratic_party_long:0 "Социал-демократическая партия Свободного города Гданьска"
+ DAN_neutrality_party:0 "Польская партия"
+ DAN_neutrality_party_long:0 "Польская партия"
+ 
+ BRT_fascism_party:0 "Партийный Национальный бретонский"
+
+ ROK_neutrality_party:0 "Движение за объединение левых и правых"
+ ROK_fascism_party:0 "КПН"
+ ROK_fascism_party_long:0 "Корейская партия независимости"
+ ROK_communism_party:0 "Рабочая партия Южной Кореи"
+ ROK_democratic_party:0 "Либеральная партия"
+ 
+ DPK_communism_party:0 "Рабочая партия Кореи"
+ 
+ OCC_fascism_party:0 "ПНО"
+ OCC_fascism_party_long:0 "Партия нации Окситанская"
+ 
+ HUN_Arrow_Cross_party:0 "ПСС"
+ HUN_Arrow_Cross_party_long:0 "Партия скрещённых стрел"

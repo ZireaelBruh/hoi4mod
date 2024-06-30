@@ -1,0 +1,71 @@
+ideas = {
+	country = {
+		ACK_def = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		ACK_def2 = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		ACK_def3 = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_leader_start_defense_level = 1
+			}
+		}
+		ACK_def4 = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_leader_start_defense_level = 1
+				army_leader_start_attack_level = 1
+			}
+		}
+		ACK_sci_des = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				research_speed_factor = -10000
+			}
+		}
+		ACK_sci_fas2 = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				research_speed_factor = 0.2
+			}
+		}
+		ACK_org = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_org = 2
+			}
+		}
+		ACK_org2 = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_org = 2
+			}
+		}
+		ACK_pere = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+	}
+}

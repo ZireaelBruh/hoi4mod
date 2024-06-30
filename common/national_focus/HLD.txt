@@ -1,0 +1,742 @@
+focus_tree = {
+	id = HLD
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HLD
+		}
+	}
+	default = no
+	focus = {
+		id = HLD_start
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 28
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = HLD_political
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 28
+		y = 1
+		prerequisite = {
+			focus = HLD_start
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = HLD_repressions
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 26
+		y = 2
+		prerequisite = {
+			focus = HLD_political
+		}
+		mutually_exclusive = {
+			focus = HLD_elections
+		}
+		completion_reward = {
+			add_stability = -0.25
+			add_political_power = 100
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.5
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 26
+		y = 3
+		prerequisite = {
+			focus = HLD_repressions
+		}
+		mutually_exclusive = {
+			focus = HLD_communize
+		}
+		completion_reward = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = ROOT
+				size = 0.8
+				keep_political_leader = yes
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority_army
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 25
+		y = 4
+		prerequisite = {
+			focus = HLD_authority
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = inf_bonus
+				bonus = 2
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority_army2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 25
+		y = 5
+		prerequisite = {
+			focus = HLD_authority_army
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = mot_bonus
+				bonus = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority_army3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 25
+		y = 6
+		prerequisite = {
+			focus = HLD_authority_army2
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = art_bonus
+				bonus = 2
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority_army4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 25
+		y = 6
+		prerequisite = {
+			focus = HLD_authority_army3
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = tank_bonus
+				bonus = 2
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority_propaganda
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 27
+		y = 4
+		prerequisite = {
+			focus = HLD_authority
+		}
+		completion_reward = {
+			add_stability = 0.25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority_find_leader
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 29
+		y = 4
+		prerequisite = {
+			focus = HLD_authority
+		}
+		completion_reward = {
+			set_party_name = {
+				ideology = neutrality
+				long_name = HLD_authority_party_full
+				name = HLD_authority_party_short
+			}
+			create_country_leader = {
+				name = "Царь Хол"
+				picture = "HLD_neutrality.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+			}
+			add_ideas = {
+				hld_authority_find_leader_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority_create_faction
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 29
+		y = 5
+		prerequisite = {
+			focus = HLD_authority_find_leader
+		}
+		prerequisite = {
+			focus = HLD_authority_propaganda
+		}
+		completion_reward = {
+			create_faction = HLD_authority_faction
+			every_country = {
+				limit = {
+					has_government = neutrality
+				}
+				country_event = {
+						id = hld_a.1
+					}
+			}
+			add_ideas = {
+				hld_authority_great_empire_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority_east
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 27
+		y = 5
+		prerequisite = {
+			focus = HLD_authority_find_leader
+		}
+		prerequisite = {
+			focus = HLD_authority_propaganda
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HEC
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = DVL
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GUP
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JBL
+			}
+			add_ideas = {
+				hld_authority_great_war_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_authority_form_empire
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 27
+		y = 6
+		prerequisite = {
+			focus = HLD_authority_east
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = GUP
+						is_core_of = JBL
+						is_core_of = DYA
+						is_core_of = EZO
+						is_core_of = KIT
+					}
+				}
+				add_core_of = HLD
+			}
+			add_threat = 10
+			add_ideas = {
+				hld_authority_empire_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_elections
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 30
+		y = 2
+		prerequisite = {
+			focus = HLD_political
+		}
+		mutually_exclusive = {
+			focus = HLD_repressions
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = HLD_democracy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 30
+		y = 3
+		prerequisite = {
+			focus = HLD_elections
+		}
+		completion_reward = {
+			add_political_power = 250
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.25
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = "1935.12.17"
+				election_frequency = 48
+			}
+			add_ideas = {
+				GEN_have_constitution
+			}
+		}
+	}	
+	focus = {
+		id = HLD_create_democracy_faction
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 35
+		y = 4
+		prerequisite = {
+			focus = HLD_democracy
+		}
+		completion_reward = {
+			ROOT = {
+				country_event = {
+					id = hld_democratic_created_faction.1
+				}
+			}
+			create_faction = HLD_democracy_faction
+			GUP = {
+				country_event = {
+					id = hld.1
+				}
+			}
+			SHA = {
+				country_event = {
+					id = hld.1
+				}
+			}
+			HEC = {
+				country_event = {
+					id = hld.1
+				}
+			}
+			KOT = {
+				country_event = {
+					id = hld.1
+				}
+			}
+			PSY = {
+				country_event = {
+					id = hld.1
+				}
+			}
+			add_ideas = {
+				hld_democratic_faction_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_democratic_weapons
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 31
+		y = 4
+		prerequisite = {
+			focus = HLD_democracy
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 50000
+				producer = ROOT
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 25000
+				producer = ROOT
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 5000
+				producer = ROOT
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 5000
+				producer = ROOT
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			add_ideas = {
+				hld_democratic_weapons_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_democratic_war_factories
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 31
+		y = 5
+		prerequisite = {
+			focus = HLD_democratic_weapons
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = {
+				hld_democratic_war_factories_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_democratic_war_naval
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 31
+		y = 6
+		prerequisite = {
+			focus = HLD_democratic_war_factories
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 3
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = {
+				hld_democratic_navy_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_democratic_factories
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 33
+		y = 4
+		prerequisite = {
+			focus = HLD_democracy
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLD_democratic_factories2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 33
+		y = 5
+		prerequisite = {
+			focus = HLD_democratic_factories
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLD_democratic_factories3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 33
+		y = 6
+		prerequisite = {
+			focus = HLD_democratic_factories2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 5
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+			add_ideas = {
+				hld_democratic_factory_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_communize
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 3
+		prerequisite = {
+			focus = HLD_repressions
+		}
+		mutually_exclusive = {
+			focus = HLD_authority
+		}
+		completion_reward = {
+			start_civil_war = {
+				ruling_party = communism
+				ideology = ROOT
+				size = 0.8
+				keep_political_leader = yes
+			}
+		}
+	}
+	focus = {
+		id = HLD_communize_factories
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 4
+		prerequisite = {
+			focus = HLD_communize
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLD_communize_factories2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 5
+		prerequisite = {
+			focus = HLD_communize_factories
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLD_communize_factories3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 6
+		prerequisite = {
+			focus = HLD_communize_factories2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLD_communization
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 4
+		prerequisite = {
+			focus = HLD_communize
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+			add_political_power = 100
+			add_ideas = {
+				hld_communization_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_communization_prepare
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 21
+		y = 5
+		prerequisite = {
+			focus = HLD_communization
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 50000
+				producer = ROOT
+			}
+			add_ideas = {
+				hld_communist_army_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_communization_prepare2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 19
+		y = 5
+		prerequisite = {
+			focus = HLD_communization
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 15000
+				producer = ROOT
+			}
+			add_ideas = {
+				hld_communist_army_mech_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_communization_west
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 6
+		prerequisite = {
+			focus = HLD_communization_prepare
+			focus = HLD_communization_prepare2
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JBL
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = EZO
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GUP
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = DYA
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = KIT
+			}
+			add_ideas = {
+				hld_communist_war_idea
+			}
+		}
+	}
+	focus = {
+		id = HLD_communization_create_faction
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 20
+		y = 7
+		prerequisite = {
+			focus = HLD_communization_west
+		}
+		completion_reward = {
+			create_faction = HLD_communization_faction
+			every_country = {
+				limit = {
+					has_government = communism
+				}
+				country_event = {
+						id = hld_c.1
+					}
+			}
+			add_ideas = {
+				hld_communist_faction_idea
+			}
+		}
+	}
+}

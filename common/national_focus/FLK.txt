@@ -1,0 +1,299 @@
+focus_tree = {
+	id = FLK
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FLK
+		}
+	}
+	default = no
+	focus = {
+		id = FLK_factory_start
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 5
+		y = 0
+		completion_reward = {
+			add_ideas = FLK_construction
+		}
+	}
+	focus = {
+		id = FLK_factory1
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = FLK_factory_start
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FLK_factory2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 4
+		y = 2
+		prerequisite = {
+			focus = FLK_factory1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FLK_factory3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 4
+		y = 3
+		prerequisite = {
+			focus = FLK_factory2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FLK_factory1a
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 6
+		y = 1
+		prerequisite = {
+			focus = FLK_factory_start
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FLK_factory2a
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = FLK_factory1a
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FLK_factory3a
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 6
+		y = 3
+		prerequisite = {
+			focus = FLK_factory2a
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FLK_anarchy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 10
+		y = 0
+		mutually_exclusive = {
+			focus = FLK_no_anarchy
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+				long_name = FLK_party_long_a
+				name = FLK_party_a
+			}
+		}
+	}
+	focus = {
+		id = FLK_anarchy2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 1
+		prerequisite = {
+			focus = FLK_anarchy
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 25000
+			}
+		}
+	}
+	focus = {
+		id = FLK_anarchy3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 10
+		y = 2
+		prerequisite = {
+			focus = FLK_anarchy2
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 30000
+			}
+		}
+	}
+	focus = {
+		id = FLK_anarchy4
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 9
+		y = 3
+		prerequisite = {
+			focus = FLK_anarchy3
+		}
+		prerequisite = {
+			focus = FLK_anarchy_start2
+		}
+		completion_reward = {
+			567 = {
+				add_building_construction = {
+				type = bunker
+				level = 3
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+			}
+			}
+			
+		}
+	}
+	focus = {
+		id = FLK_anarchy_start
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 8
+		y = 1
+		prerequisite = {
+			focus = FLK_anarchy
+		}
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+				can_use_kamikaze_pilots = yes
+			}
+			add_manpower = 100000
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = FLK_anarchy_start2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 8
+		y = 2
+		prerequisite = {
+			focus = FLK_anarchy_start
+		}
+		completion_reward = {
+			set_rule = {
+			can_guarantee_other_ideologies = no
+			}
+			army_experience = 50
+			air_experience = 50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = FLK_no_anarchy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 12
+		y = 0
+		mutually_exclusive = {
+			focus = FLK_anarchy
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = FLK_no_anarchy2
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 12
+		y = 1
+		mutually_exclusive = {
+			focus = FLK_anarchy
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = FLK_no_anarchy3
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		x = 12
+		y = 2
+		mutually_exclusive = {
+			focus = FLK_anarchy
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+}

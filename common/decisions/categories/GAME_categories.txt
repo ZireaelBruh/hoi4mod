@@ -1,0 +1,10 @@
+KOT_decisions = {
+	priority = 10
+	icon = GFX_decision_bs_glory_of_csa
+	allowed = {
+		tag = KOT
+	}
+	visible = {
+		has_completed_focus = KOT_right2
+	}
+}
